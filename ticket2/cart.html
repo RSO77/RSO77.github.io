@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Site</title>
+
+    <meta name="description" content="Title" /><!-- Description of the page -->
+    <meta name="author" content="Grebenyuk Viktor"><!-- Author Name -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css"><!-- Bootstrap Style -->
+    <link rel="stylesheet" href="css/font-awesome.min.css"><!-- Custom Style -->
+    <link rel="stylesheet" href="css/style.css"><!-- Custom Style -->
+</head>
+<body>
+<!--header begin-->
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="header-left">
+                    <div class="logo">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <form action="" method="POST" role="form">
+                        <div class="form-group searchBlock">
+                            <input type="search" class="form-control" name="search" placeholder="Поиск мероприятий...">
+                            <i class="fa fa-search"></i>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6 ">
+                <div class="heder-right">
+                    <div class="header-contact">
+                        <span> Заказ билетов</span>
+                        <div class="phones">
+                            <p class="textBold"><a href="tel:+7 (495) 662-56-78">+7 (495) 662-56-78</a></p>
+                            <p class="textBold"><a href="tel:+7 (495) 018-37-93">+7 (495) 018-37-93</a></p>
+                        </div>
+                    </div>
+                    <div class="basket">
+                        <button class="btn">
+                            <img src="img/basket.png" alt="">
+                            <span> Корзина</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="headerMenu">
+                <nav class="navbar navbar-default" role="navigation">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">театр</a></li>
+                            <li><a href="#">концерт</a></li>
+                            <li><a href="#">мюзикл</a></li>
+                            <li><a href="#">шоу</a></li>
+                            <li><a href="#">спорт</a></li>
+                            <li><a href="#">цирк</a></li>
+                            <li><a href="#">елки</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </nav>
+
+            </div>
+        </div>
+    </div>
+</header>
+<!--HEADER END-->
+
+<!--MAIN BEGIN-->
+<main>
+    <div class="tikets-page">
+        <div class="breadcrumbs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ol class="breadcrumb">
+                            <li><a href="#" class="breadcrumb_a">Главная</a></li>
+                            <span class="glyphicon glyphicon-menu-right"></span>
+                            <li><a href="#" class="breadcrumb_a">Мероприятия</a></li>
+                            <span class="glyphicon glyphicon-menu-right"></span>
+                            <li><a href="#" class="active">Корзина</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>Корзина</h2>
+            <p class="text-uppercase">
+                <span>спектакль мы.</span> балет аллы духовой todes
+            </p>
+            <div class="ticket-block">
+                <table class="table table-hover">
+                	<tbody>
+                		<tr class="head">
+                			<td rowspan="2" class="vertical"><img src="img/vertical.png" alt=""></td>
+                            <td class="text-uppercase ">дата</td>
+                            <td class="text-uppercase">время</td>
+                            <td class="text-uppercase third">площадка</td>
+                            <td class="text-uppercase">ряд</td>
+                            <td class="text-uppercase">место</td>
+                            <td class="text-uppercase">стоимость</td>
+                            <td rowspan="2" class="close-ticket"><a href="#"><img src="img/ticket-close.png" alt=""></a></td>
+                		</tr>
+                		<tr>
+                			<td class="first"><span class="big ">26 </span>декабря понедельник </td>
+                			<td><span class="big">20:30</span></td>
+                			<td class="third">Государственный Кремлевский дворец</td>
+                			<td><span class="big">4</span></td>
+                			<td><span class="big">22</span></td>
+                			<td><span class="big">7500<i class="fa fa-rub"></i></span></td>
+                		</tr>
+                	</tbody>
+                </table>
+            </div>
+            <div class="ticket-block bm35">
+                <table class="table table-hover">
+                    <tbody>
+                    <tr class="head">
+                        <td rowspan="2" class="vertical"><img src="img/vertical.png" alt=""></td>
+                        <td class="text-uppercase">дата</td>
+                        <td class="text-uppercase">время</td>
+                        <td class="text-uppercase third">площадка</td>
+                        <td class="text-uppercase">ряд</td>
+                        <td class="text-uppercase">место</td>
+                        <td class="text-uppercase">стоимость</td>
+                        <td rowspan="2" class="close-ticket"><a href="#"><img src="img/ticket-close.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                        <td class="first"><span class="big ">26 </span>декабря понедельник </td>
+                        <td><span class="big">20:30</span></td>
+                        <td class="third">Государственный Кремлевский дворец</td>
+                        <td><span class="big">4</span></td>
+                        <td><span class="big">22</span></td>
+                        <td><span class="big">7500<i class="fa fa-rub"></i></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-uppercase">
+                <span>новогодний концерт.</span> хор турецкого
+            </p>
+            <div class="ticket-block">
+                <table class="table table-hover">
+                    <tbody>
+                    <tr class="head">
+                        <td rowspan="2" class="vertical"><img src="img/vertical.png" alt=""></td>
+                        <td class="text-uppercase">дата</td>
+                        <td class="text-uppercase">время</td>
+                        <td class="text-uppercase third">площадка</td>
+                        <td class="text-uppercase">ряд</td>
+                        <td class="text-uppercase">место</td>
+                        <td class="text-uppercase">стоимость</td>
+                        <td rowspan="2" class="close-ticket"><a href="#"><img src="img/ticket-close.png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                        <td class="first"><span class="big ">26 </span>декабря понедельник </td>
+                        <td><span class="big">20:30</span></td>
+                        <td class="third">CK Олимпийский</td>
+                        <td><span class="big">7</span></td>
+                        <td><span class="big">4</span></td>
+                        <td><span class="big">2200<i class="fa fa-rub"></i></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="pay-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="pay-text">Выбрать способ оплаты</div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="light-blue t-h">
+                                    <div class="icon-block"><img src="img/money-tool.png" alt=""></div>
+                                    <div class="text-block"><span class="l-b-bold">Наличными</span> (при выкупе из касс или курьеру при получении заказа)</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="blue t-h">
+                                    <div class="icon-block"><img src="img/visa-mc.png" alt=""></div>
+                                    <div class="text-block">Банковскими картами<span class="l-b-bold">Visa, MasterCard</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pay-text">Выбрать способ доставки</div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="light-blue b-h">
+                                    <div class="icon-block"><img src="img/front-car.png" alt=""></div>
+                                    <div class="text-block"><span class="l-b-bold">Самовывоз</span></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="blue b-h">
+                                    <div class="icon-block"><img src="img/delivery-man.png" alt=""></div>
+                                    <div class="text-block"><span class="l-b-bold">Курьером</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inform">
+                            <span>Заказ и выкуп билетов на сайте возможен круглосуточно.</span>
+                            <span>Заказ и доставка билетов в call-центре ежедневно с 9:00 до 21:00</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="left-p-b">
+                            <div class="text"> Итого к оплате: 17200 <i class="fa fa-rub"></i> </div>
+                            <button> подтвердить заказ </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!--MAIN END-->
+
+<!--FOOTER BEGIN-->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-top clearfix">
+                <div class="logo-img">
+                    <img src="img/logo2.png" alt="">
+                </div>
+                <div class="tel-number">
+                    <div class="footer-contact">
+                        <span> Заказ билетов</span>
+                        <div class="phones">
+                            <p class="textBold"><a href="tel:+7 (495) 662-56-78">+7 (495) 662-56-78</a></p>
+                            <p class="textBold"><a href="tel:+7 (495) 018-37-93">+7 (495) 018-37-93</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="partner-img">
+                    <img src="img/visa.png" alt="">
+                    <img src="img/logotype.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom clearfix">
+            <div class="footer-menu">
+                <div class="col-md-2 col-sm-6">
+                    <ul class="list-unstyled">
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Новости</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Кассы</a></li>
+                        <li><a href="#">Доставка</a></li>
+                        <li><a href="#">Афиша</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Отмена и перенос мероприятий</a></li>
+                        <li><a href="#">Возврат билетов</a></li>
+                        <li><a href="#">как зказать</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Корпоративным клиентам</a></li>
+                        <li><a href="#">Публичная оферта</a></li>
+                        <li><a href="#">Online оплата</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="copyright">
+                Copyright © 2017 Все права защищены. Moscow Tickets Group
+            </div>
+        </div>
+    </div>
+</footer>
+<!--FOOTER END-->
+
+<script src="js/jquery.min.js"></script><!-- Jquery Library -->
+<script src="js/bootstrap.min.js"></script><!-- Bootstrap Library -->
+<script src="js/app.js"></script><!-- Custom Library -->
+</body>
+</html>

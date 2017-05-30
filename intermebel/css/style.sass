@@ -1,0 +1,2725 @@
+
+//FONTS BEGIN
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,70..')
+=font-face($family, $path, $weight: normal, $style: normal)
+	@font-face
+		font-family: $family
+		src: url('#{$path}.eot')
+		src: url('#{$path}.eot?#iefix') format('embedded-opentype'), url('#{$path}.woff') format('woff'), url('#{$path}.ttf') format('truetype')
+		font-weight: $weight
+		font-style: $style
+
+
++font-face('DINProMedium', '../fonts/DINPro/DINPro-Medium')
++font-face('DINProBold', '../fonts/DINPro/DINPro-Bold')
++font-face('dinprolight', '../fonts/DINPro/dinpro-light')
++font-face('dinproregular', '../fonts/DINPro/dinpro-regular')
++font-face('Etelka-Narrow-Light-Pro-Regular', '../fonts/Etelka-Narrow-Light-Pro/Etelka-Narrow-Light-Pro-Regular')
++font-face('MullerBold', '../fonts/Muller/MullerBold')
++font-face('MullerLight', '../fonts/Muller/MullerLight')
+
+=dnp-m
+	font-family: "DINProMedium", arial, sans-serif
+=dnp-b
+	font-family: "DINProBold", arial, sans-serif
+=dnp-l
+	font-family: "dinprolight", arial, sans-serif
+=dnp-r
+	font-family: "dinproregular", arial, sans-serif
+=enlp-r
+	font-family: "Etelka-Narrow-Light-Pro-Regular", arial, sans-serif
+=muller-b
+	font-family: "MullerBold", arial, sans-serif
+=muller-l
+	font-family: "MullerLight", arial, sans-serif
+
+//FONTS END
+
+// cover
+=cover
+	background-position: center center
+	background-repeat: no-repeat
+	background-size: cover
+
+
+// media
+// $width - ширина на адаптив
+// @content - класс элемента
+=r($width)
+	@media only screen and (max-width: $width + px)
+		@content
+
+
+//OTHER STYLES BEGIN
+img
+	max-width: 100%
+
+p, h1, h2, h3, a, li
+	cursor: pointer
+body
+	font-size: 14px
+	font-weight: 400
+	background-size: 1920px 1200px
+	width: 100%
+	max-width: 100%
+.fixed-block
+	position: fixed
+	right: 0px
+	top: 40%
+	z-index: 999
+	width: 50px
+	.pop-up-btn1
+		width: 50px
+		height: 45px
+		background-color: #1363a5
+		display: block
+		text-align: center
+		border-radius: 5px
+		padding-top: 9px
+		outline: none
+		&:hover
+			background-color: #0a4f87
+	.pop-up-btn2
+		outline: none
+		margin-top: 3px
+		display: block
+		text-align: center
+		text-decoration: none
+		img
+			margin-bottom: 2px
+			background-color: #f0b600
+			padding: 13px 9px
+			border-radius: 5px 5px 0 0
+			&:hover
+				background-color: #ce9d05
+		span
+			height: 1px
+			background-color: white
+			width: 100%
+		.qustion-text
+			background-color: #f0b600
+			line-height: 48px
+			padding: 105px 20px 0
+			border-radius: 0 0 5px 5px
+			&:hover
+				background-color: #ce9d05
+			p
+				transform: rotate(-90deg)
+				font-size: 18px
+				+dnp-m
+				color: black
+				white-space: nowrap
+
+
+
+.modal-title
+	text-align: center
+	font-size: 26px
+	+enlp-r
+	color: #0d113d
+
+
+
+.container
+	background-color: #fff
+	max-width: 1310px
+
+.top-menu
+	.collapse
+		border: none !important
+		background-color: #848484
+		position: relative
+		z-index: 99
+		text-align: center
+	.navbar-default
+		border: none !important
+		height: 27px
+		min-height: 27px
+		margin-bottom: 0
+		.navbar-nav
+			li
+				padding-top: 4px
+				&:last-child
+					a
+						border-right: none
+						padding-right: 0
+				&:first-child
+					a
+						padding-left: 0
+				a
+					color: white
+					background-color: #848484
+					font-size: 14px
+					padding: 0 28px 0 28px
+					+dnp-m
+					border-right: 1px solid white
+					&:hover
+						color: #f0b600
+					img
+						margin: 0 3px 3px -12px
+			.active
+				a
+					color: white
+					background-color: #848484
+					+dnp-m
+					&:hover
+						color: #f0b600
+						background-color: #848484
+		.navbar-toggle
+			border-color: #fff
+			.icon-bar
+				background-color: #fff
+	.navbar
+		background-color: #848484
+
+
+.boton-menu
+	border: none
+	position: relative
+	.collapse
+		position: relative
+		z-index: 999
+		text-align: center
+	.navbar-default
+		border: none !important
+		background-color: #fff
+		height: 44px
+		min-height: 44px
+		margin-bottom: 0
+		.navbar-nav
+			background-color: white
+			margin: 0 auto
+			li
+				padding-top: 4px
+				margin: 0 16px
+				&:last-child
+					margin-right: 0
+				&:first-child
+					margin-left: 0
+				a
+					color: #00589c
+					padding: 0
+					font-size: 16px
+					line-height: 24px
+					padding-bottom: 7px
+					+dnp-m
+					&:hover
+						color: #f0b600
+						border-bottom: 1px solid #f0b600
+				.drop-1
+					background-color: white
+					width: 436px
+					border: 1px solid #e2e2e2
+					border-radius: 5px
+					position: absolute
+					z-index: 999
+					left: 0
+					top: 45px
+					display: none
+					.title
+						padding: 12px 0
+						border-bottom: 1px solid #e2e2e2
+						width: 100%
+						.col
+							display: inline-block
+							width: 215px
+							text-align: center
+							.text
+								display: inline-block
+								vertical-align: middle
+								text-align: left
+								+dnp-m
+								color: #003e6f
+								font-size: 16px
+								line-height: 14px
+								margin-left: 9px
+							img
+								display: inline-block
+					.bot-menu
+						ul
+							display: inline-block
+							max-width: 215px
+							margin-top: 15px
+							margin-bottom: 30px
+							padding: 0
+							li
+								list-style-type: none
+								text-align: left
+								padding-left: 5px
+								margin: 0
+								padding: 0 20px
+								&:hover
+									border-radius: 5px
+									background-color: #fabd00
+									a
+										background-color: #fabd00
+										color: white
+										text-decoration: none
+								a
+									font-size: 16px
+									line-height: 36px
+									+dnp-m
+									color: #5e5e5e
+			.active
+				a
+					color: #00589c
+					background-color: #fff
+					+dnp-m
+					&:hover
+						color: #f0b600
+						background-color: #fff
+						border-bottom: 1px solid #f0b600
+		.navbar-toggle
+			border-color: #ddd
+	.navbar
+
+.boton-menu-index
+	border-top: 1px solid rgba(132, 132, 132, 0.3)
+	border-bottom: 1px solid rgba(132, 132, 132, 0.3)
+.boton-menu2
+	.collapse
+		background-color: #00589c
+		border-radius: 5px
+		transform: skewX(20deg)
+		.navbar-nav
+			transform: skewX(-20deg)
+			background-color: #00589c
+			li
+				padding-top: 2px
+				a
+					color: #fff
+					padding-bottom: 5px
+					&:hover
+						color: #f0b600
+						position: relative
+						border-bottom: none
+						&:before
+							position: absolute
+							height: 1px
+							width: 100%
+							background-color: #f0b600
+							bottom: -7px
+							content: ""
+				.drop-1
+					background-color: white
+					border: 1px solid #e2e2e2
+					.bot-menu
+						ul
+							li
+								&:hover
+									background-color: #fabd00
+									a
+										background-color: #fabd00
+										color: white
+										text-decoration: none
+								a
+									background-color: white
+									color: #5e5e5e
+			.active
+				a
+					color: #fff
+					background-color: #00589c
+					+dnp-m
+					border-bottom: none
+					&:hover
+						color: #f0b600
+						background-color: #00589c
+						position: relative
+						border-bottom: none
+						&:before
+							position: absolute
+							height: 1px
+							width: 100%
+							background-color: #f0b600
+							bottom: -7px
+							content: ""
+.line-bottom
+	position: relative
+	&:before
+		position: absolute
+		height: 1px
+		width: 100%
+		background-color: #f0b600
+		content: ""
+
+.carousel-indicators
+	position: relative
+	left: 0px
+	margin-left: 0px
+	width: 100%
+	border: none
+	text-align: left
+	margin-top: 20px
+	li, .active
+		float: none
+		height: auto
+		width: 22%
+		text-indent: 0
+		margin-right: 2.5%
+		&:last-child
+			margin-right: 0
+		img
+			width: 100%
+.carousel-control.left,.carousel-control.right
+	background: transparent
+	background-image: none
+.carousel-control
+	width: auto
+.carousel-control.left
+	bottom: 40px
+	height: auto
+	opacity: 1
+	top: 50%
+	width: 40px
+	z-index: 99
+	left: 3px
+	img
+		position: absolute
+		bottom: 12%
+		left: 0
+		&:hover
+			background: url(../img/next2.png) center, url(../img/next22.png) no-repeat center center
+.carousel-control.right
+	bottom: 40px
+	height: auto
+	opacity: 1
+	top: 50%
+	width: 40px
+	z-index: 99
+	right: 12px
+	img
+		position: absolute
+		bottom: 12%
+		right: 0
+		&:hover
+			background: url(../img/next2.png) center, url(../img/next21.png) no-repeat center center
+
+
+
+.breadcrumbs
+	margin-top: 20px
+	.breadcrumb
+		margin-bottom: 0px
+		background-color: #fff
+		li
+			color: #7a7979
+			font-size: 10.37px
+			a
+				font-size: 10.37px
+				color: #9d9d9d
+				text-decoration: underline
+.breadcrumb > li + li::before
+	color: #ccc
+	content: "| "
+	padding: 0 5px
+
+.header
+	.top-menu
+		background-color: #848484
+		.container
+			background-color: #848484
+	.context
+		margin-top: 30px
+		margin-bottom: 15px
+		.col-lg-9, .col-lg-3
+			padding: 0
+		.col-lg-9
+			text-align: right
+		.search, .phone, .driving, .clock
+			display: inline-block
+			margin-right: 22px
+			vertical-align: middle
+			button
+				transform: skewX(20deg)
+				background-color: #00589c
+				color: white
+				border-radius: 4px
+				border: none
+				width: 30px
+				height: 25px
+				padding: 0
+				text-align: center
+				line-height: normal
+				display: inline-block
+				margin-right: 7px
+				img
+					transform: skewX(-20deg)
+			p
+				display: inline-block
+				color: #00589c
+				text-decoration: none
+			a
+				color: #00589c
+				text-decoration: none
+
+
+		.search
+			max-width: 275px
+			width: 100%
+			position: relative
+			&:hover
+				input
+					border-color: #fabd00
+					box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #FABD00
+				button
+					background-color: #fabd00
+			.form-control
+				max-width: 250px
+				display: inline-block
+				height: 25px
+				margin-right: 5px
+				line-height: normal
+				padding: 0 12px
+			button
+				position: absolute
+				margin-right: 0
+				right: 0
+		.phone
+
+		.driving
+			&:hover
+				button
+					background-color: #fabd00
+				p
+					color: #fabd00
+
+		.clock
+			margin-right: 0
+
+
+.main-index
+	.section_1
+		.owl-carousel
+			position: relative
+			.owl-nav
+				.owl-prev
+					position: absolute
+					width: 42px
+					height: 42px
+					background: url(../img/prev.png)
+					left: 0px
+					top: 50%
+					&:hover
+						background: url(../img/next2.png) center, url(../img/next22.png) no-repeat center center
+				.owl-next
+					position: absolute
+					width: 42px
+					height: 42px
+					background: url(../img/next.png)
+					right: 0
+					top: 50%
+					&:hover
+						background: url(../img/next2.png) center, url(../img/next21.png) no-repeat center center
+			.item
+				.caption
+					width: 100%
+					max-width: 1280px
+					position: absolute
+					top: 12%
+					left: 15%
+					right: 0
+					.inl-block
+						display: block
+						.block1
+							display: inline-block
+							background-color: #fabe05
+							padding: 0 30px
+							transform: skewX(-20deg)
+							border-radius: 5px
+							p
+								font-size: 30px
+								text-transform: uppercase
+								color: white
+								+dnp-b
+								transform: skewX(20deg)
+								margin: 0
+								span
+									&:hover
+										color: #00589c
+						.block2
+							display: inline-block
+							background-color: #fabe05
+							padding: 0 30px
+							transform: skewX(-20deg)
+							border-radius: 5px
+							margin-left: 390px
+							p
+								font-size: 39.17px
+								color: white
+								+dnp-b
+								transform: skewX(20deg)
+								margin: 0
+						.block3
+							margin-left: 390px
+							display: inline-block
+							padding: 0 30px
+							p
+								font-size: 30px
+								color: #00589c
+								+dnp-l
+	.section_2
+		position: relative
+		font-size: 0
+		button
+			transform: skewX(-20deg)
+			border-radius: 5px
+			border: 1px solid #FABE05
+			background-color: #E3E3E3
+			height: 37px
+			color: #FABE05
+			outline: none
+			min-width: 28px
+			&:hover
+				background-color: #ce9d05
+				p
+					color: #fff !important
+			p
+				transform: skewX(20deg)
+				font-size: 19.6px
+				+dnp-m
+				margin: 0px
+				color: #FABE05
+		.item1, .item2, .item3, .item4, .item5, .item6, .item7
+			display: inline-block
+			margin: 0
+			padding: 0
+			vertical-align: top
+			float: left
+		.half
+			width: 16.66%
+			height: 220px
+			img
+				width: 100%
+				max-height: 100%
+		.item1
+			background-color: #e7ebee
+			line-height: 220px
+		.but1
+			margin-right: 2px
+		.item2
+			width: 16.66%
+			height: 440px
+			position: relative
+			background-color: #e3e3e3
+			overflow: hidden
+			img
+				width: 100%
+				position: absolute
+				bottom: 0
+				right: 0
+				left: 0
+				z-index: 100
+				max-height: 520px
+			.content
+				text-align: center
+				position: absolute
+				top: 10%
+				left: 0
+				right: 0
+				z-index: 200
+				p
+					font-size: 22.61px
+					+enlp-r
+					color: #527d86
+					margin: 0px
+				.but1
+					padding: 0 50px
+				button
+					margin-top: 30px
+					&:hover
+						background-color: #ce9d05
+						p
+							color: #fff
+					p
+						color: #FABE05
+				h3
+					+dnp-m
+					font-size: 16.58px
+					color: #527d86
+
+		.item3
+			position: relative
+			height: 220px
+			background-color: #ecb200
+			overflow: hidden
+			.content
+				text-align: center
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				z-index: 200
+				h1
+					font-size: 30px
+					+dnp-l
+					color: white
+				p
+					font-size: 16.58px
+					+dnp-m
+					color: white
+			img
+				position: absolute
+				bottom: 0px
+				right: 0
+				left: 0
+				z-index: 100
+		.item4, .item6
+			position: relative
+			width: 50%
+			height: 220px
+			img
+				display: inline-block
+				width: 50%
+			.content
+				display: inline-block
+				vertical-align: top
+				h3
+					margin-left: 25px
+					+dnp-m
+					font-size: 16.58px
+					color: #527d86
+
+				p
+					margin: 0px
+					margin-left: 15px
+					font-size: 22.61px
+					color: #527d86
+					+enlp-r
+				button
+					background-color: #e8edf0
+					margin-top: 30px
+					&:hover
+						color: #fff
+						background-color: #ce9d05
+					p
+						margin: 0px
+						margin-left: 0
+						color: #FABE05
+				.but1
+					padding: 0 50px
+		.item4
+			background-color: #e8edf0
+			img
+				margin-top: 40px
+				max-height: 180px
+			.content
+				margin: 4% 5% 0 7%
+
+		.item5
+			position: absolute
+			top: 220px
+			left: 0
+			background-color: white
+			line-height: 220px
+		.item6
+			display: inline-block
+			background-color: #fff
+			.content
+				margin: 4% 5% 0 7%
+				button
+					background-color: #fff
+			img
+				margin-top: 10px
+				max-height: 180px
+		.item7
+			background-color: #f4f0f0
+			line-height: 220px
+
+	.section_3
+		height: 150px
+		line-height: 150px
+		background: url("../img/s3-bg.png")
+		text-align: center
+		h1
+			display: inline-block
+			font-size: 30px
+			+dnp-m
+			color: white
+			span
+				color: #ECB200
+
+		.search
+			margin-left: 40px
+			display: inline-block
+			position: relative
+			.form-block
+				position: relative
+				display: inline-block
+				line-height: normal
+				input
+					padding-left: 15px
+					border-style: solid
+					border-width: 1px
+					width: 389px
+					height: 29px
+					transform: skewX(-20deg)
+					border-radius: 5px
+				button
+					height: 28px
+					background-color: #ecb200
+					border: none
+					padding: 0 20px
+					transform: skewX(-20deg)
+					border-radius: 5px
+					position: absolute
+					right: 0
+					top: 0
+					&:hover
+						background-color: #ce9d05
+					p
+						color: white
+						margin: 0
+						font-size: 16.58px
+						line-height: 16.58px
+						transform: skewX(20deg)
+	.section_4
+		position: relative
+		font-size: 0
+		button
+			transform: skewX(-20deg)
+			border-radius: 5px
+			border: 1px solid #FABE05
+			background-color: #E3E3E3
+			color: #FABE05
+			height: 37px
+			outline: none
+			min-width: 28px
+			&:hover
+				color: #fff
+				background-color: #ce9d05
+				p
+					color: #fff
+			p
+				transform: skewX(20deg)
+				font-size: 19.6px
+				+dnp-m
+				margin: 0px
+				color: #FABE05
+		.but1
+			margin-right: 2px
+		.item1, .item2, .item3, .item4, .item5, .item6, .item7
+			display: inline-block
+			margin: 0
+			padding: 0
+			vertical-align: top
+			float: left
+		.half
+			width: 16.66%
+			height: 220px
+			img
+				width: 100%
+				max-height: 100%
+		.item1, .item6
+			position: relative
+			width: 50%
+			height: 220px
+			img
+				display: inline-block
+				width: 50%
+			.content
+				display: inline-block
+				vertical-align: top
+				h3
+					margin-left: 25px
+					+dnp-m
+					font-size: 16.58px
+					color: #605f5f
+				p
+					margin: 0px
+					margin-left: 15px
+					font-size: 22.61px
+					color: #605f5f
+					+enlp-r
+					i
+						margin-right: 5px
+				button
+					background-color: #e8edf0
+					margin-top: 30px
+					&:hover
+						background-color: #ce9d05
+						p
+							color: #fff
+					p
+						margin: 0px
+						margin-left: 0
+						color: #FABE05
+				.but1
+					padding: 0 50px
+		.item1
+			text-align: right
+			background-color: #e8edf0
+			img
+				margin-top: 40px
+				max-height: 160px
+			.content
+				text-align: center
+				margin: 4% 5% 0 7%
+		.item2
+			background-color: #00589c
+			position: relative
+			height: 220px
+			height: 220px
+			.content
+				text-align: center
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				z-index: 200
+				h1
+					font-size: 30px
+					+dnp-l
+					color: white
+				p
+					font-size: 16.58px
+					+dnp-m
+					color: white
+			img
+				position: absolute
+				bottom: 0px
+				right: 0
+				left: 0
+				z-index: 100
+		.item3
+			width: 16.66%
+			height: 440px
+			position: relative
+			background-color: #e3e3e3
+			overflow: hidden
+			img
+				width: 100%
+				position: absolute
+				bottom: 0
+				right: 0
+				left: 0
+				z-index: 100
+				max-height: 580px
+			.content
+				text-align: center
+				position: absolute
+				top: 10%
+				left: 0
+				right: 0
+				z-index: 300
+				.but1
+					padding: 0 50px
+				p
+					font-size: 22.61px
+					color: #605f5f
+					+enlp-r
+					margin: 0px
+				button
+					margin-top: 30px
+					&:hover
+						background-color: #ce9d05
+						p
+							color: #fff
+					p
+						color: #FABE05
+				h3
+					+dnp-m
+					font-size: 16.58px
+					color: #605f5f
+		.item4
+			background-color: #eeeeee
+			line-height: 220px
+		.item5
+			background-color: #e7ebee
+			line-height: 220px
+			position: absolute
+			top: 220px
+			left: 0
+			img
+				width: 70%
+				margin-left: 20%
+		.item6
+			position: absolute
+			top: 220px
+			left: 16.66%
+			.content
+				float: right
+				text-align: center
+				margin: 4% 5% 0 7%
+				button
+					background-color: #fff
+			img
+				margin-top: 20px
+				max-height: 220px
+		.item7
+			line-height: 220px
+	.section_5
+		position: relative
+		.owl-carousel
+			position: relative
+			.owl-nav
+				display: block
+				.owl-prev
+					position: absolute
+					width: 42px
+					height: 42px
+					background: url(../img/prev.png)
+					left: 0px
+					top: 40%
+					&:hover
+						background: url(../img/next2.png) center, url(../img/next22.png) no-repeat center center
+				.owl-next
+					position: absolute
+					width: 42px
+					height: 42px
+					background: url(../img/next.png)
+					right: 0
+					top: 40%
+					&:hover
+						background: url(../img/next2.png) center, url(../img/next21.png) no-repeat center center
+		width: 100%
+		max-width: 100%
+		.item
+			.caption-l, .caption-r
+				position: absolute
+				top: 10%
+				text-align: center
+				h1
+					+dnp-m
+					font-size: 30px
+					span
+						color: #ecb200
+				button
+					transform: skewX(-20deg)
+					border-radius: 5px
+					border: 1px solid #FABE05
+					outline: none
+					min-width: 28px
+					&:hover
+						color: #fff
+						background-color: #ce9d05
+					p
+						transform: skewX(20deg)
+						font-size: 15px
+						+dnp-m
+						margin: 0px
+						color: #fabe05
+						&:hover
+							color: #fff
+				.but1
+					margin-right: 2px
+					padding: 6px 50px
+				.but2
+					padding: 6px 7px
+			.caption-l
+				right: 21%
+				h1
+					color: white
+				button
+					background-color: #2a4064
+					&:hover
+						background-color: #11213c
+			.caption-r
+				left: 21%
+				h1
+					color: #00589b
+				button
+					background-color: #f7f5f5
+		.logo
+			position: absolute
+			top: 9%
+			right: 0
+			left: 0
+			text-align: center
+			z-index: 99
+			img
+				width: 250px
+	.section_7
+		text-align: center
+		h3
+			font-size: 19.6px
+			+dnp-l
+			color: #00589c
+		.titl-top
+			text-align: center
+			position: relative
+			margin-top: 50px
+			padding-bottom: 20px
+		.titl-bot
+			text-align: center
+			position: relative
+			padding-bottom: 20px
+			margin-bottom: 35px
+		.line1, .line2
+			position: absolute
+			bottom: 0
+			right: 0
+			left: 0
+			height: 2px
+		.line1
+			background-color: #ebebeb
+			width: 100%
+			z-index: 990
+		.line2
+			background-color: #eeb400
+			width: 170px
+			z-index: 999
+			margin: 0 auto
+		.block
+			margin: 100px 0
+			width: 19%
+			display: inline-block
+			text-align: center
+			vertical-align: top
+			.text
+				width: 150px
+				margin: 10px auto
+				font-size: 14px
+				color: #00589c
+				line-height: 19px
+	.section_8
+		background: url("../img/s8-bg.png") 0 0 no-repeat
+		background-size: cover
+		padding-top: 10px
+		text-align: center
+		.block
+			display: block
+			font-size: 0
+			.text, .img
+				vertical-align: top
+				display: inline-block
+				width: 430px
+				height: 300px
+				margin: 0
+				img
+					width: 100%
+					height: 100%
+			.text
+				text-align: left
+				background-color: white
+				padding: 50px 25px 20px 25px
+				position: relative
+				.titl
+					color: #527d86
+					+dnp-m
+					font-size: 16.58px
+				.data
+					color: #848484
+					+dnp-r
+					font-size: 14px
+					margin: 15px 0
+				p
+					font-size: 14px
+					color: #605f5f
+				.opasity
+					position: absolute
+					bottom: 0%
+					right: 0
+					left: 0
+					top: 60%
+					background: linear-gradient(to top, #fff, rgba(255, 255, 255, 0))
+				.square2, .square1
+					background-color: #fff
+					width: 25px
+					height: 25px
+					position: absolute
+					top: 17%
+					transform: rotate(45deg)
+					z-index: 99
+				.square1
+					left: -12px
+				.square2
+					right:  -12px
+			.img
+				position: relative
+				button
+					position: absolute
+					top: 50%
+					left: 50%
+					font-size: 19.6px
+					transform: skewX(-20deg) translate(-50%, -50%)
+					border-radius: 5px
+					padding: 2px 12px
+					background-color: rgba(239, 239, 239, 0.502)
+					border: 1px solid #000
+					outline: none
+					&:hover
+						background-color: rgba(130, 130, 130, 0.502)
+					p
+						+dnp-m
+						transform: skewX(20deg)
+						margin-bottom: 1px
+						text-transform: uppercase
+						color: #527d86
+						&:hover
+							color: black
+		.news
+			a
+				+dnp-l
+				line-height: 70px
+				color: white
+				text-decoration: underline
+				font-size: 19.6px
+	.section_9
+		background: url("../img/slider/bg.png")
+		padding: 20px 0
+		.container
+			background: transparent
+			.item
+				height: 79px
+				img
+					height: 100%
+					max-width: 105px
+					width: 105px
+					margin: 0 auto
+					//filter: grayscale(100%)
+				&:hover
+					img
+						//filter: grayscale(0)
+		.owl-carousel
+			position: relative
+			padding-left: 30px
+			padding-right: 30px
+			.owl-nav
+				display: block
+				.owl-prev
+					position: absolute
+					width: 35px
+					height: 35px
+					background: url(../img/prev.png) center
+					left: 0px
+					top: 25%
+					&:hover
+						background: url(../img/next2.png) center, url(../img/next22.png) no-repeat center center
+				.owl-next
+					position: absolute
+					width: 35px
+					height: 35px
+					background: url(../img/next.png) center
+					right: 0
+					top: 25%
+					&:hover
+						background: url(../img/next2.png) center, url(../img/next21.png) no-repeat center center
+	img.grayscale
+		-webkit-filter: grayscale(100%)
+		-moz-filter: grayscale(100%)
+		filter: grayscale(100%)
+		//filter: gray
+		-moz-transition: all 1s ease
+		-webkit-transition: all 1s ease
+		transition: all 1s ease
+		cursor: pointer
+	img.grayscale:hover
+		-webkit-filter: grayscale(0%)
+		-moz-filter: grayscale(0%)
+		filter: grayscale(0%)
+		//filter:none
+	.grayscale.grayscale-replaced > svg
+		transition: opacity 1s ease
+		opacity: 1
+	.grayscale.grayscale-replaced.grayscale-fade:hover > svg
+		opacity: 0
+
+
+.main-S-brands
+	.section_1
+		padding-bottom: 100px
+		.titl-brend
+			margin-top: 0
+			color: #00589c
+			font-size: 30px
+			+dnp-l
+		.brand-block
+			text-align: center
+			img
+				margin: 0 auto
+				width: 100%
+				max-width: 277px
+			a
+				font-size: 16.58px
+				color: #a0a0a0
+				margin-top: 15px
+				margin-bottom: 50px
+				display: block
+				+dnp-m
+				&:hover
+					color: #6b6b6b
+					text-decoration: none
+				&:first-child
+					margin-bottom: 0px
+			button
+				background-color: white
+				border: none
+				+dnp-m
+				font-size: 16.58px
+				color: #00589c
+				display: inline-block
+				outline: none
+				&:hover
+					color: #004071
+				img
+					display: inline-block
+
+
+.main-information
+	.section_1
+		.title
+			font-size: 30px
+			color: #00589c
+			margin-top: 0
+			margin-bottom: 50px
+			+dnp-l
+		img
+			display: inline-block
+			vertical-align: top
+			margin-right: 10px
+			width: 50%
+		.text
+			display: inline-block
+			vertical-align: top
+			width: 48%
+			p
+				font-size: 16px
+				line-height: 17px
+				color: #605f5f
+				+dnp-r
+	.section_2
+		h3
+			font-size: 19.6px
+			+dnp-l
+			color: #00589c
+		ol, ul
+			padding-left: 20px
+			li
+				h2
+					font-size: 16.58px
+					+dnp-m
+					max-width: 480px
+					color: #5f5e5e
+		p
+			line-height: 17px
+			color: #605f5f
+			font-size: 16px
+			+dnp-r
+	.section_3
+		padding-bottom: 50px
+		.table-block
+			overflow-x: auto
+		table
+			min-width: 765px
+			max-width: 100%
+			width: 100%
+			thead
+				line-height: 32px
+				font-size: 16.58px
+				color: white
+				+dnp-m
+				background-color: #848484
+				tr
+					th
+						border-left: 1px solid #5c5c5c
+						text-align: center
+						&:first-child
+							background-color: #00589c
+							border-left: 1px solid #e6e6e6
+						&:last-child
+							border-right:  1px solid #e6e6e6
+					.zg1
+						width: 200px
+					.zg2
+						width: 290px
+					.zg3
+						width: 290px
+					.zg4
+						width: 110px
+						background-color: #b4b4b4
+					.zg5
+						width: 290px
+			tbody
+				font-size: 14px
+				+dnp-r
+				color: #60331b
+				line-height: 24px
+				tr
+					td
+						border-left: 1px solid #adadad
+						text-align: center
+						border-bottom: 1px solid #e6e6e6
+						&:first-child
+							color: #00589c
+							border-left: 1px solid #e6e6e6
+						&:last-child
+							border-right:  1px solid #e6e6e6
+					.c1
+						color: #00589c
+						background-color: #f0f0f0
+					.c2
+						color: #00589c
+						background-color: #eaeaea
+				.gray
+					background-color: #f8f8f8
+
+
+.main-map-brend
+	.section_1
+		.titl
+			font-size: 30px
+			color: #00589c
+			margin-top: 0
+			margin-bottom: 50px
+			+dnp-l
+			h1
+				margin-top: 0px
+		.img
+			text-align: center
+			display: inline-block
+			margin-right: 20px
+			vertical-align: top
+			p
+				font-size: 16.58px
+				+dnp-m
+				color: #5f5e5e
+		.text
+			display: inline-block
+			vertical-align: top
+			p
+				font-size: 14px
+				+dnp-r
+				color: #605f5f
+				margin-bottom: 7px
+				img
+					margin-right: 10px
+	.section_2
+		.titl
+			h3
+				font-size: 14px
+				+muller-b
+				line-height: 19px
+				color: #42475c
+		img
+			float: left
+			margin-right: 20px
+			margin-bottom: 20px
+		p
+			+muller-l
+			font-size: 13px
+			line-height: 17px
+			color: #1c1c1c
+			margin-bottom: 15px
+	.section_3
+		padding-bottom: 120px
+		.titl
+			color: #00589c
+			margin: 50px 0
+			font-size: 26px
+			+dnp-l
+		.item
+			text-align: center
+			button
+				transform: skewX(-20deg)
+				border-radius: 5px
+				border: 1px solid #fabe05
+				outline: 0
+				&:hover
+					background-color: #ce9d05
+					p
+						color: white
+				p
+					transform: skewX(20deg)
+					font-size: 16.58px
+					+dnp-m
+					margin: 0
+					color: white
+			.but1
+				padding: 7px 55px
+				background-color: #fabe05
+			.but2
+				padding: 7px 8px
+				background-color: white
+				p
+					color: #fabe05
+			.name
+				+dnp-m
+				font-size: 19.6px
+				text-align: left
+				line-height: 22px
+				margin: 20px 0
+				color: #5f5e5e
+			ul
+				padding-bottom: 10px
+				padding-left: 20px
+				li
+					font-size: 16.58px
+					color: #848484
+					text-align: left
+					+dnp-r
+			.slid-line
+				border: 1px solid #fabe05
+				width: 100%
+				height: 1px
+				margin: 10px 0
+			.price
+				color: #00589c
+				font-size: 30px
+				+dnp-l
+				text-align: left
+			.price-
+				color: #848484
+				font-size: 19.6px
+				+dnp-l
+				text-align: left
+				text-decoration: line-through
+				margin-bottom: 20px
+		.owl-carousel
+			position: relative
+			.owl-nav
+				display: block
+				.owl-prev
+					position: absolute
+					width: 35px
+					height: 35px
+					background: url(../img/prev.png) center
+					left: -36px
+					top: 46%
+					&:hover
+						background: url(../img/next2.png) center, url(../img/next22.png) no-repeat center center
+				.owl-next
+					position: absolute
+					width: 35px
+					height: 35px
+					background: url(../img/next.png) center
+					right: -36px
+					top: 46%
+					&:hover
+						background: url(../img/next2.png) center, url(../img/next21.png) no-repeat center center
+
+
+.main-armchairs-map
+	.section_3
+		padding-bottom: 120px
+		.titl
+			color: #00589c
+			margin: 50px 0
+			font-size: 26px
+			+dnp-l
+		.item
+			text-align: center
+			max-width: 255px
+			margin: 0 auto
+			button
+				transform: skewX(-20deg)
+				border-radius: 5px
+				border: 1px solid #fabe05
+				outline: 0
+				&:hover
+					background-color: #ce9d05
+					p
+						color: white
+				p
+					transform: skewX(20deg)
+					font-size: 19px
+					font-family: DINProMedium,arial,sans-serif
+					margin: 0
+					color: white
+			.but1
+				padding: 6px 50px
+				background-color: #fabe05
+			.but2
+				padding: 6px 10px
+				background-color: white
+				p
+					color: #fabe05
+			.name
+				+dnp-m
+				font-size: 19.6px
+				text-align: left
+				line-height: 22px
+				margin: 20px 0
+				color: #5f5e5e
+			ul
+				padding-bottom: 10px
+				padding-left: 20px
+				li
+					font-size: 16.58px
+					color: #848484
+					text-align: left
+					+dnp-r
+			.slid-line
+				border: 1px solid #fabe05
+				width: 100%
+				height: 1px
+				margin: 10px 0
+			.price
+				color: #00589c
+				font-size: 30px
+				+dnp-l
+				text-align: left
+			.price-
+				color: #848484
+				font-size: 19.6px
+				+dnp-l
+				text-align: left
+				text-decoration: line-through
+				margin-bottom: 20px
+		.owl-carousel
+			position: relative
+			.owl-nav
+				display: block
+				.owl-prev
+					position: absolute
+					width: 35px
+					height: 35px
+					background: url(../img/prev.png) center
+					left: 1px
+					top: 20%
+					&:hover
+						background: url(../img/next2.png) center, url(../img/next22.png) no-repeat center center
+				.owl-next
+					position: absolute
+					width: 35px
+					height: 35px
+					background: url(../img/next.png) center
+					right: 1px
+					top: 20%
+					&:hover
+						background: url(../img/next2.png) center, url(../img/next21.png) no-repeat center center
+	.section_2
+		.titl
+			font-size: 30px
+			color: #00589c
+			margin-top: 0
+			margin-bottom: 50px
+			+dnp-l
+			h1
+				margin-top: 0px
+		.sliders
+			display: inline-block
+			vertical-align: top
+			margin-right: 3%
+			max-width: 48%
+
+		.r-block
+			display: inline-block
+			vertical-align: top
+			max-width: 48%
+			h2
+				font-size: 16.58px
+				color: #5f5e5e
+				+dnp-m
+				margin-top: 0px
+			ul
+				padding-left: 15px
+				li
+					color: #848484
+					h4
+						+dnp-r
+						line-height: 19px
+						font-size: 14px
+						color: #848484
+			p
+				color: #605f5f
+				+dnp-r
+				font-size: 14px
+			.slid-line
+				border: 1px solid #fabe05
+				width: 100%
+				max-width: 250px
+				height: 1px
+				margin: 10px 0
+				margin-top: 30px
+			.price
+				color: #00589c
+				font-size: 30px
+				+dnp-l
+				text-align: left
+			.price-
+				color: #848484
+				font-size: 19.6px
+				+dnp-l
+				text-align: left
+				text-decoration: line-through
+				margin-bottom: 20px
+			button
+				transform: skewX(-20deg)
+				border-radius: 5px
+				border: 1px solid #fabe05
+				outline: 0
+				&:hover
+					background-color: #ce9d05
+					p
+						color: white
+				p
+					transform: skewX(20deg)
+					font-size: 19px
+					+dnp-m
+					margin: 0
+					color: white
+			.but1
+				padding: 6px 50px
+				background-color: #fabe05
+			.but2
+				padding: 9px 11px
+				background-color: white
+				vertical-align: top
+
+				img
+					color: #fabe05
+					transform: skewX(20deg)
+
+
+.main-catalog
+	.titl
+		+dnp-l
+		color: #00589c
+		font-size: 30px
+	.section_4
+		background: url("../img/slider/bg.png")
+		padding: 20px 0
+		.container
+			background: transparent
+			.item
+				height: 79px
+				img
+					height: 100%
+					max-width: 105px
+					width: 105px
+					margin: 0 auto
+					filter: grayscale(100%)
+				&:hover
+					img
+						filter: grayscale(0)
+		.owl-carousel
+			position: relative
+			.owl-nav
+				display: block
+				.owl-prev
+					position: absolute
+					width: 35px
+					height: 35px
+					background: url(../img/prev.png) center
+					left: 0px
+					top: 25%
+					&:hover
+						background: url(../img/next2.png) center, url(../img/next22.png) no-repeat center center
+				.owl-next
+					position: absolute
+					width: 35px
+					height: 35px
+					background: url(../img/next.png) center
+					right: 0
+					top: 25%
+					&:hover
+						background: url(../img/next2.png) center, url(../img/next21.png) no-repeat center center
+	.section_3
+		padding-bottom: 30px
+		p
+			color: #527d86
+			+dnp-r
+			font-size: 16px
+	.section_2
+		.aside
+			.widget-block
+				background-color: #f8f8f8
+				padding: 15px 20px 20px
+				margin-bottom: 3px
+				border: 1px solid #E6E6E6
+				.form-control
+					height: 26px
+					font-size: 14px
+					+dnp-r
+					color: #5f5e5e
+					border: 1px solid #9A9A9A
+				.arrow
+					&:before
+						background: url("../img/back.png")
+						content: ""
+						position: absolute
+						right: -6px
+						width: 12px
+						height: 9px
+						display: block
+						top: 20%
+				.title
+					margin-bottom: 20px
+					h2
+						color: #527d86
+						font-size: 22px
+						+dnp-m
+						margin-top: 5px
+				.count
+					font-size: 18px
+					+dnp-r
+					color: #5f5e5e
+				.slider.slider-horizontal
+					width: 100%
+				.slider-track
+					border-radius: 5px
+					background: #d7d7d7
+				.slider-selection
+					background: #FABD00
+				.slider-handle
+					border-radius: 50%
+					top: 2px
+					width: 16px
+					height: 15px
+					border: 2px solid #FABD00
+					background: #fff
+			.clear
+				margin: 20px 0 0 25px
+				img
+					margin-top: -2px
+				a
+					color: #00589c
+					font-size: 16.58px
+					+dnp-m
+					text-decoration: underline
+		.r-block
+			text-align: center
+			.item
+				text-align: left
+				display: inline-block
+				margin-bottom: 90px
+				width: 33%
+				max-width: 255px
+				button
+					transform: skewX(-20deg)
+					border-radius: 5px
+					border: 1px solid #fabe05
+					outline: 0
+					&:hover
+						background-color: #ce9d05
+						p
+							color: white
+					p
+						transform: skewX(20deg)
+						font-size: 16.58px
+						+dnp-m
+						margin: 0
+						color: white
+				.but1
+					padding: 7px 55px
+					background-color: #fabe05
+				.but2
+					padding: 7px 8px
+					background-color: white
+					p
+						color: #fabe05
+				.name
+					+dnp-m
+					font-size: 19.6px
+					text-align: left
+					line-height: 22px
+					margin: 20px 0
+					color: #5f5e5e
+				ul
+					padding-bottom: 10px
+					padding-left: 20px
+					li
+						font-size: 16.58px
+						color: #848484
+						text-align: left
+						+dnp-r
+				.slid-line
+					border: 1px solid #fabe05
+					width: 100%
+					height: 1px
+					margin: 10px 0
+					max-width: 255px
+				.price
+					color: #00589c
+					font-size: 30px
+					+dnp-l
+					text-align: left
+				.price-
+					color: #848484
+					font-size: 19.6px
+					+dnp-l
+					text-align: left
+					text-decoration: line-through
+					margin-bottom: 20px
+			.eye
+				background-color: white
+				border: none
+				+dnp-m
+				font-size: 16.58px
+				color: #00589c
+				display: block
+				outline: none
+				margin: 0 auto
+				margin-top: -30px
+				margin-bottom: 50px
+				&:hover
+					color: #004071
+				img
+					display: inline-block
+		.sort
+			text-align: right
+			margin: 0 20px 20px 0
+			font-size: 16.58px
+			color: #717171
+			span
+				display: inline-block
+				+dnp-b
+			p
+				display: inline-block
+				margin: 0 10px
+				font-size: 15px
+			a
+				display: inline-block
+				+dnp-r
+				color: #717171
+
+
+.main-map
+	.section_2
+		margin-bottom: 100px
+		.owl-carousel5
+			padding-right: 35px
+			padding-left: 35px
+			position: relative
+			.owl-nav
+				display: block
+				.owl-prev
+					position: absolute
+					width: 35px
+					height: 35px
+					background: url(../img/prev.png) center
+					left: 0px
+					top: 20%
+					&:hover
+						background: url(../img/next2.png) center, url(../img/next22.png) no-repeat center center
+				.owl-next
+					position: absolute
+					width: 35px
+					height: 35px
+					background: url(../img/next.png) center
+					right: 0px
+					top: 20%
+					&:hover
+						background: url(../img/next2.png) center, url(../img/next21.png) no-repeat center center
+			.item
+				text-align: center
+				&:hover
+					a
+						+dnp-m
+						text-decoration: none
+						color: black
+				img
+					width: 100%
+					max-width: 277px
+					margin: 0 auto
+					margin-bottom: 20px
+				a
+					color: #5f5e5e
+					+dnp-r
+	.section_1
+		.titl
+			h1
+				margin-top: 0px
+				margin-bottom: 20px
+				font-size: 30px
+				+dnp-l
+				color: #00589c
+		.nav-tabs
+			border: none
+			li
+				border: none
+				a
+					background-color: transparent
+					border: none
+					&:hover, &:focus
+						background-color: transparent
+						border-color: transparent
+						border: none
+			li.active
+				a
+					border: none
+					border-color: transparent
+					background-color: transparent
+					&:hover, &:focus
+						border-color: transparent
+						background-color: transparent
+						border: none
+		.top-tabs
+			margin-bottom: 2px
+			li
+				border: 1px solid #fabe05
+				transform: skewX(-20deg)
+				margin: 5px
+				border-radius: 5px
+				a
+					+dnp-m
+					color: #fabe05
+					transform: skewX(20deg)
+					font-size: 19.59px
+					padding: 5px 57px
+			li.active
+				background-color: #fabe05
+				a
+					color: white
+		.botom-tabs
+			margin-top: 20px
+			margin-bottom: 10px
+			li
+				&:before
+					position: absolute
+					top: 45%
+					right: 0
+					left: 0
+					background-color: #848484
+					width: 3px
+					height: 3px
+					border-radius: 50%
+					content: ""
+				&:last-child
+					a
+					margin-right: 0
+				a
+					color: #848484
+					text-decoration: underline
+					padding: 0
+					margin-right: 30px
+					padding-left: 10px
+			li.active
+				&:before
+					color: #00589c
+				a
+					text-decoration: none
+					color: #00589c
+		.tab-content
+			margin-bottom: 90px
+			.tab-pane
+				position: relative
+				.brend
+					border: 1px solid #00589C
+					background-color: #E1E1E1
+					position: absolute
+					left: 0
+					top: 0
+					width: 185px
+					text-align: center
+					height: 105px
+					line-height: 100px
+					&:before
+						content: "\f0d7"
+						font-family: FontAwesome
+						display: inline-block
+						width: 10px
+						height: 5px
+						font-size: 20px
+						position: absolute
+						color: #E1E1E1
+						bottom: 2px
+						left: 0
+						right: 0
+						margin: 0 auto
+						line-height: normal
+				p
+					font-size: 19.6px
+					+dnp-l
+					color: #c0c0c0
+
+
+
+.block
+
+
+
+
+
+.checkbox-custom
+	position: relative
+	width: 13px
+	height: 13px
+	border: 1px solid #9a9a9a
+	background-color: #fff
+	display: inline-block
+	margin-top: 1px
+
+.checkbox
+	display: none
+.checkbox-styled
+	display: block
+.checkbox-custom,
+.label
+	color: #848484
+	font-size: 14px
+	font-weight: 400
+	line-height: 19px
+	display: inline-block
+	vertical-align: middle
+	padding-bottom: 0
+	border-radius: 3px
+
+label.active
+	.label
+		color: #5f5e5e
+.checkbox:checked + .checkbox-custom::before
+	content: ""
+	display: block
+	position: absolute
+	top: 0px
+	right: 0px
+	bottom: 0px
+	left: 0px
+	background: #fabe05
+	border-radius: 3px
+
+
+
+.footer
+	.top-menu
+		background-color: #00589c
+		.container
+			background-color: #00589c
+		.collapse
+			border: none !important
+			background-color: #00589c
+			position: relative
+			z-index: 999
+			text-align: center
+		.navbar-default
+			border: none !important
+			height: 40px
+			min-height: 40px
+			margin-bottom: 0
+			.navbar-nav
+				li
+					padding-top: 9px
+					&:last-child
+						a
+							border-right: none
+							padding-right: 0
+					&:first-child
+						a
+							padding-left: 0
+					a
+						color: white
+						background-color: #00589c
+						font-size: 14px
+						padding: 0 28px 0 28px
+						+dnp-m
+						border-right: 1px solid white
+						&:hover
+							color: #f0b600
+						img
+							margin: 0 7px 4px -12px !important
+				.active
+					a
+						color: white
+						background-color: #00589c
+						+dnp-m
+						&:hover
+							color: #f0b600
+							background-color: #00589c
+		.navbar
+			background-color: #00589c
+	.content
+		background-color: #ededed
+		padding-top: 25px
+		padding-bottom: 50px
+		.container
+			background-color: #ededed
+		.logo
+			margin-bottom: 25px
+		.p-text
+			font-size: 13px
+			margin-left: 70px
+			+dnp-r
+		.phone, .driving, .clock
+			display: block
+			padding-left: 30px
+			vertical-align: middle
+			button
+				transform: skewX(20deg)
+				background-color: #00589c
+				color: white
+				border-radius: 4px
+				border: none
+				width: 30px
+				height: 25px
+				padding: 0
+				text-align: center
+				line-height: normal
+				display: inline-block
+				margin-right: 7px
+				img
+					transform: skewX(-20deg)
+			p
+				display: inline-block
+				color: #00589c
+				text-decoration: none
+			a
+				color: #00589c
+				text-decoration: none
+		.phone
+			margin-bottom: 12px
+			a
+				font-size: 20px
+
+		.driving,.clock
+			margin-right: 0
+			p
+				font-size: 20px
+		.driving
+			margin-bottom: 5px
+		ul
+			display: inline-block
+			margin: 0
+			&:first-child
+				padding-left: 0px
+			li
+				color: #00589c
+				a
+					font-size: 13.57px
+					+dnp-l
+					line-height: 23px
+					color: #00589c
+		.copi
+			.text
+				display: inline-block
+				text-align: right
+				cursor: pointer
+				a
+					display: block
+			.img
+				vertical-align: top
+				display: inline-block
+				margin-left: 5px
+
+
+.pop-up-btn
+	background-color: #1363a5
+	color: #fff
+	border-radius: 4px
+	border: none
+	width: 40px
+	height: 50px
+.modal-content
+	border: 1px solid #51717B
+.modal
+	.line-bottom
+		&:before
+			bottom: -14px
+	.modal-sm
+		width: 100%
+		max-width: 360px
+	.modal-body
+		.form-control
+			border: 1px solid #51717B
+			background-color: #eeeeee
+			color: #b7b7b7
+			font-size: 14px
+			font-family: ("Roboto")
+			height: 35px
+			&:first-child
+				margin-top: 35px
+			&:last-child
+				margin-top: 23px
+				margin-bottom: 15px
+		.form-group2
+			.form-control
+				color: #b7b7b7
+				font-size: 14px
+				margin-top: 23px
+				&:first-child
+					margin-top: 35px
+				&:last-child
+					margin-bottom: 15px
+			textarea
+				border: 1px solid #51717B
+				width: 100%
+				background-color: #eeeeee
+				padding: 10px
+				color: #b7b7b7
+				font-size: 14px
+				font-family: ("Roboto")
+				height: 100px
+
+.modal-content2
+	padding-bottom: 25px
+	.modal-header
+		padding: 0
+		border: 0
+		.modal-title
+			margin-top: 25px
+			background-color: #f7f5f5
+			line-height: 80px
+		.close
+			margin-top: 0
+			margin-right: 5px
+
+.modal-title
+	line-height: 26px
+.modal-footer
+	background-color: #f7f5f5
+	border-radius: 0 0 6px 6px
+	.btn-orang
+		background-color: #f0b600
+		font-size: 18px
+		+dnp-m
+		border: none
+		color: white
+		border-radius: 5px
+		padding: 12px
+		margin-bottom: 30px
+		margin-top: 10px
+		&:hover
+			background-color: #ce9d05
+
+// media
+@media (max-width: 1200px)
+	.boton-menu
+		.navbar-default
+			.navbar-nav
+				li
+					margin: 0 6px
+	.header
+		.context
+			.search, .phone, .driving, .clock
+				margin-right: 14px
+				button
+					margin-right: 3px
+			.search
+				max-width: 190px
+				input
+					max-width: 145px
+				button
+					margin-right: -4px
+					top: 0
+	.main-index
+		.section_2
+			.item2
+				width: 30%
+			.item4, .item6
+				width: 70%
+			.item6
+				img
+					margin-top: 0
+					width: 45%
+		.section_4
+			.item3
+				width: 30%
+				img
+					width: 70%
+					margin: 0 auto
+			.item1
+				width: 70%
+				img
+					margin-top: 35px
+			.item6
+				text-align: right
+				width: 70%
+				left: 0
+				img
+					margin-top: 0
+					width: 45%
+				.content
+					text-align: center
+	.footer
+		.content
+			.logo
+				text-align: center
+			.p-text
+				margin: 0 auto
+				margin-top: 10px
+				width: 210px
+			.phone, .driving, .clock
+				display: block
+				padding-left: 0
+				text-align: center
+			.ul
+				text-align: center
+				margin-top: 10px
+			ul
+				text-align: left
+			.phone
+				margin-bottom: 7px
+			.driving
+				margin-bottom: 0px
+			.copi
+				margin-top: 10px
+				text-align: left
+				.text
+					display: inline-block
+					text-align: right
+					a
+						display: block
+				.img
+					vertical-align: top
+					display: inline-block
+					margin-left: 5px
+	.main-armchairs-map
+		.section_2
+			.sliders
+				display: block
+				margin-right: 0
+				max-width: 600px
+				margin: 0 auto
+			.r-block
+				display: block
+				vertical-align: top
+				max-width: 100%
+	.main-catalog
+		.section_2
+			.aside
+				.widget-block
+					padding: 15px 12px 20px
+			.r-block
+				.item
+					margin: 0 50px
+					margin-bottom: 70px
+	.label
+		font-size: 12px
+
+	.main-information
+		.section_1
+			img
+				display: block
+				width: 100%
+				margin: 0 auto
+				margin-bottom: 20px
+				max-width: 588px
+			.text
+				display: block
+				vertical-align: top
+				width: 100%
+
+
+
+@media (max-width: 992px)
+	.top-menu
+		.navbar-default
+			.navbar-nav
+				li
+					a
+						padding: 0 18px 0 18px
+	.footer
+		.top-menu
+			.navbar-default
+				.navbar-nav
+					li
+						a
+							padding: 0 18px 0 18px
+		.content
+			.logo
+				text-align: center
+				margin-bottom: 5px
+			.p-text
+				margin-top: 0
+				width: 210px
+				margin-bottom: 20px
+			.ul
+				text-align: center
+				margin-top: 10px
+			ul
+				text-align: left
+			.copi
+				text-align: center
+
+	.boton-menu
+		.navbar-default
+			.navbar-nav
+				li
+					margin: 0 5px
+					a
+						font-size: 12px
+	.header
+		.context
+			text-align: center
+			.col-lg-9
+				text-align: center
+			.search, .phone, .driving, .clock
+				margin-right: 14px
+				margin-top: 20px
+				button
+					margin-right: 3px
+			.search
+				max-width: 190px
+				input
+					max-width: 145px
+				button
+					margin-right: -4px
+	.main-index
+		.section_3
+			padding: 15px 15px 0 15px
+			line-height: normal
+
+			h1
+				display: block
+			.search
+				margin: 0 auto
+				display: block
+				max-width: 389px
+				.form-block
+					width: 100%
+					input
+						width: 100%
+					button
+						bottom: 0
+						top: 0
+		.section_2
+			.item6
+				img
+					margin-top: 20px
+					width: 50%
+		.section_8
+			.block
+				.text
+					.square1, .square2
+						display: none
+	.main-catalog
+		.section_2
+			.r-block
+				.item
+					margin: 30px
+				.eye
+					margin: 0 auto
+	.carousel-control.right, .carousel-control.left
+		display: none
+
+
+
+@media (max-width: 767px)
+	.navbar-collapse
+		padding-left: 0
+		padding-right: 0
+	.main-index
+		.section_1
+			.owl-carousel
+				.item
+					.caption
+						top: 7%
+						left: 7%
+						right: 0
+						.inl-block
+							.block1
+								padding: 0 20px
+								p
+									font-size: 20px
+							.block2
+								padding: 0 20px
+								margin-left: 258px
+								p
+									font-size: 25px
+							.block3
+								margin-left: 258px
+								padding: 0 20px
+								p
+									font-size: 20px
+		.section_2
+			.item4, .item6, .item2
+				width: 100%
+				float: none
+				height: 440px
+				.content
+					top: 7%
+					text-align: center
+					position: absolute
+					left: 0
+					right: 0
+					z-index: 200
+				img
+					width: 100%
+					max-width: 300px
+					margin: 0 auto
+					position: absolute
+					bottom: 0
+					right: 0
+					left: 0
+					z-index: 100
+			.item4, .item6
+				img
+					bottom: 30px
+		.section_4
+			.item3, .item6, .item1
+				width: 100%
+				float: none
+				height: 440px
+				position: relative
+				top: 0
+				.content
+					top: 7%
+					text-align: center
+					position: absolute
+					left: 0
+					right: 0
+					z-index: 200
+					margin: 0 auto
+				img
+					width: 100%
+					max-width: 300px
+					margin: 0 auto
+					position: absolute
+					bottom: 0
+					right: 0
+					left: 0
+					z-index: 100
+		.section_7
+			.sec-7-content
+				margin: 40px 0
+			.block
+				width: 49%
+				margin: 20px 0
+	.top-menu
+		.navbar-default
+			.navbar-nav
+				li
+					a
+						padding-right: 0
+						padding-left: 0
+	.footer
+		.top-menu
+			.navbar-default
+				.navbar-nav
+					li
+						a
+							padding-right: 0
+							padding-left: 0
+	.boton-menu
+		.navbar-default
+			.navbar-nav
+				li
+					.drop-1
+						position: relative
+						margin: 0 auto
+						top: 0
+	.boton-menu2
+		.collapse
+			transform: none
+			.navbar-nav
+				transform: none
+				li
+					a:hover:before
+						left: 0
+						bottom: 0
+				.active
+					a:hover:before
+						left: 0
+						bottom: 0
+	.main-information
+		.section_1
+			img
+				margin: 10px auto
+			.text
+				margin: 0 auto
+
+	.main-map-brend
+		.section_3
+			.owl-carousel
+				position: relative
+				padding: 0 35px
+				.owl-nav
+					.owl-prev
+						left: 0
+					.owl-next
+						right: 0
+
+	.main-catalog
+		.section_2
+			.r-block
+				.item
+					display: block
+					width: 255px
+					margin: 20px auto
+					.but1
+						margin-left: 20px
+
+	.boton-menu2
+		.collapse
+			.navbar-nav
+				li
+					a:hover:before
+
+
+@media (max-width: 580px)
+	.main-index
+		.section_1
+			.owl-carousel
+				.item
+					.caption
+						top: 5%
+						left: 5%
+						right: 0
+						.inl-block
+							.block1
+								padding: 0 20px
+								p
+									font-size: 15px
+							.block2
+								padding: 0 20px
+								margin-left: 160px
+								p
+									font-size: 20px
+							.block3
+								margin-left: 160px
+								padding: 0 20px
+								p
+									font-size: 16px
+		.section_8
+			.block
+				margin: 10px
+				.text, .img
+					width: 100%
+					max-width: 400px
+
+	.boton-menu
+		.navbar-default
+			.navbar-nav
+				li
+					a
+						font-size: 16px
+					.drop-1
+						width: 280px
+						.title
+							.col
+								width: 135px
+								.text
+									display: block
+									text-align: center
+								img
+									display: block
+									margin: 0 auto
+						.bot-menu
+							ul
+								display: inline-block
+								max-width: 215px
+								margin-top: 15px
+								margin-bottom: 30px
+								padding: 0
+								li
+									list-style-type: none
+									text-align: left
+									padding-left: 2px
+									margin: 0
+									padding: 0 5px
+									a
+										font-size: 13px
+
+	.carousel-indicators .active, .carousel-indicators li
+		margin-right: 1%
+
+@media (max-width: 470px)
+	.main-index
+		.section_7
+			.block
+				width: 90%
+				margin: 15px 0
+
+
+
+@media (max-width: 370px)
+	.footer
+		.content
+			.ul
+				text-align: center
+				margin-bottom: 20px
+			ul
+				padding-left: 20px
+				text-align: center
+				&:first-child
+					padding-left: 20px
+				li
+					list-style-type: none
+	.main-index
+		.section_5
+			.item
+				.caption-l, .caption-r
+					h1
+						font-size: 24px
+	.modal-dialog
+		margin: 0

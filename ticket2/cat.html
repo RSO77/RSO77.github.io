@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Site</title>
+
+    <meta name="description" content="Title" /><!-- Description of the page -->
+    <meta name="author" content="Grebenyuk Viktor"><!-- Author Name -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css"><!-- Bootstrap Style -->
+    <link rel="stylesheet" href="css/font-awesome.min.css"><!-- Custom Style -->
+    <link rel="stylesheet" href="css/style.css"><!-- Custom Style -->
+</head>
+<body>
+<!--header begin-->
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="header-left">
+                    <div class="logo">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <form action="" method="POST" role="form">
+                        <div class="form-group searchBlock">
+                            <input type="search" class="form-control" name="search" placeholder="Поиск мероприятий...">
+                            <i class="fa fa-search"></i>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6 ">
+                <div class="heder-right">
+                    <div class="header-contact">
+                        <span> Заказ билетов</span>
+                        <div class="phones">
+                            <p class="textBold"><a href="tel:+7 (495) 662-56-78">+7 (495) 662-56-78</a></p>
+                            <p class="textBold"><a href="tel:+7 (495) 018-37-93">+7 (495) 018-37-93</a></p>
+                        </div>
+                    </div>
+                    <div class="basket">
+                        <button class="btn">
+                            <img src="img/basket.png" alt="">
+                            <span> Корзина</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="headerMenu">
+                <nav class="navbar navbar-default" role="navigation">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">театр</a></li>
+                            <li><a href="#">концерт</a></li>
+                            <li><a href="#">мюзикл</a></li>
+                            <li><a href="#">шоу</a></li>
+                            <li><a href="#">спорт</a></li>
+                            <li><a href="#">цирк</a></li>
+                            <li><a href="#">елки</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </nav>
+
+            </div>
+        </div>
+    </div>
+</header>
+<!--HEADER END-->
+
+<!--MAIN BEGIN-->
+<main>
+    <!--BREADCRUMBS BEGIN-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ol class="breadcrumb">
+                        <li><a href="#" class="breadcrumb_a">Главная</a></li>
+                        <span class="glyphicon glyphicon-menu-right"></span>
+                        <li><a href="#" class="breadcrumb_a active">Билеты</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END BREADCRUMBS-->
+    
+    <!--cat SECTION 1 BEGIN-->
+    <div class="cat_section_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <h3>Билеты</h3>
+                </div>
+                <div class="col-md-10">
+                    <ul class="months">
+                        <li>февраль</li>
+                        <li>март</li>
+                        <li>Апрель</li>
+                        <li>май</li>
+                        <li>июнь</li>
+                        <li>июль</li>
+                        <li>август</li>
+                        <li>сентябрь</li>
+                        <li>ноябрь</li>
+                        <li>декабрь</li>
+                    </ul>
+                    <ul class="ul_pages">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END cat SECTION 1-->
+    <!--cat SECTION 2 BEGIN-->
+    <div class="cat_section_2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 col-md-2 cat_drop1">
+                    <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            концерт
+                            <span class="caret"></span>
+                        </button>
+
+                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                            <li><a href="#">концерт</a></li>
+                            <li><a href="#">эстрада</a></li>
+                            <li><a href="#">для все семьи</a></li>
+                            <li><a href="#">В выходные</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-md-2 cat_drop2">
+                    <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            эстрада
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                            <li><a href="#">концерт</a></li>
+                            <li><a href="#">эстрада</a></li>
+                            <li><a href="#">для все семьи</a></li>
+                            <li><a href="#">В выходные</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-md-2 cat_drop3">
+                    <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            для все семьи
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                            <li><a href="#">концерт</a></li>
+                            <li><a href="#">эстрада</a></li>
+                            <li><a href="#">для все семьи</a></li>
+                            <li><a href="#">В выходные</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-md-2 cat_drop4">
+                    <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            В выходные
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                            <li><a href="#">концерт</a></li>
+                            <li><a href="#">эстрада</a></li>
+                            <li><a href="#">для все семьи</a></li>
+                            <li><a href="#">В выходные</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4 col-md-offset-1">
+                    <p class="cat_sect2_date">Сегодня: 18 февраля, 12:15</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--END cat SECTION 2-->
+    <!--cat SECTION 3 BEGIN-->
+    <div class="cat_section_3">
+        <div class="container">
+            <div class="row">
+                <!--<div>-->
+                <div class="col-sm-6 col-md-3 cat_sect_3__all">
+                    <div class="cs3_img1 cs3_div_img" style=""></div>
+                    <div class="cs3_content">
+                        <p>Спектакль или постановка.</p>
+                        <p>Бедность — не порок</p>
+                        <ul class="cs3_ul__discription" style="background-color: #eeeeee">
+                            <li class="li_discript1">26 декабря. Суббота. 20:30</li>
+                            <li class="li_discript2">3000<i class="fa fa-rub" aria-hidden="true"></i> — 5000<i class="fa fa-rub" aria-hidden="true"></i></li>
+                            <li class="li_discript3">Большой театр</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="cs3_btn_cost">
+                        <img src="img/tickets_white.png" alt="" class="cs3_btn_img">
+                        Купить билеты</button>
+                </div>
+
+                <div class="col-sm-6 col-md-3 cat_sect_3__all">
+                    <div class="cs3_img2 cs3_div_img"></div>
+                    <div class="cs3_content">
+                        <p>Спектакль или постановка.</p>
+                        <p>Бедность — не порок</p>
+                        <ul class="cs3_ul__discription" style="background-color: #eeeeee">
+                            <li class="li_discript1">26 декабря. Суббота. 20:30</li>
+                            <li class="li_discript2">3000<i class="fa fa-rub" aria-hidden="true"></i> — 5000<i class="fa fa-rub" aria-hidden="true"></i></li>
+                            <li class="li_discript3">Большой театр</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="cs3_btn_cost">
+                        <img src="img/tickets_white.png" alt="" class="cs3_btn_img">
+                        Купить билеты</button>
+                </div>
+
+                <div class="col-sm-6 col-md-3 cat_sect_3__all">
+                    <div class="cs3_img3 cs3_div_img"></div>
+                    <div class="cs3_content">
+                        <p>Спектакль или постановка.</p>
+                        <p>Бедность — не порок</p>
+                        <ul class="cs3_ul__discription" style="background-color: #eeeeee">
+                            <li class="li_discript1">26 декабря. Суббота. 20:30</li>
+                            <li class="li_discript2">3000<i class="fa fa-rub" aria-hidden="true"></i> — 5000<i class="fa fa-rub" aria-hidden="true"></i></li>
+                            <li class="li_discript3">Большой театр</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="cs3_btn_cost">
+                        <img src="img/tickets_white.png" alt="" class="cs3_btn_img">
+                        Купить билеты</button>
+                </div>
+
+                <div class="col-sm-6 col-md-3 cat_sect_3__all">
+                    <div class="cs3_img4 cs3_div_img"></div>
+                    <div class="cs3_content">
+                        <p>Спектакль или постановка.</p>
+                        <p>Бедность — не порок</p>
+                        <ul class="cs3_ul__discription" style="background-color: #eeeeee">
+                            <li class="li_discript1">26 декабря. Суббота. 20:30</li>
+                            <li class="li_discript2">3000<i class="fa fa-rub" aria-hidden="true"></i> — 5000<i class="fa fa-rub" aria-hidden="true"></i></li>
+                            <li class="li_discript3">Большой театр</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="cs3_btn_cost">
+                        <img src="img/tickets_white.png" alt="" class="cs3_btn_img">
+                        Купить билеты</button>
+                </div>
+
+                <div class="col-sm-6 col-md-3 cat_sect_3__all">
+                    <div class="cs3_img5 cs3_div_img" style=""></div>
+                    <div class="cs3_content">
+                        <p>Спектакль или постановка.</p>
+                        <p>Бедность — не порок</p>
+                        <ul class="cs3_ul__discription" style="background-color: #eeeeee">
+                            <li class="li_discript1">26 декабря. Суббота. 20:30</li>
+                            <li class="li_discript2">3000<i class="fa fa-rub" aria-hidden="true"></i> — 5000<i class="fa fa-rub" aria-hidden="true"></i></li>
+                            <li class="li_discript3">Большой театр</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="cs3_btn_cost">
+                        <img src="img/tickets_white.png" alt="" class="cs3_btn_img">
+                        Купить билеты</button>
+                </div>
+
+                <div class="col-sm-6 col-md-3 cat_sect_3__all">
+                    <div class="cs3_img6 cs3_div_img"></div>
+                    <div class="cs3_content">
+                        <p>Спектакль или постановка.</p>
+                        <p>Бедность — не порок</p>
+                        <ul class="cs3_ul__discription" style="background-color: #eeeeee">
+                            <li class="li_discript1">26 декабря. Суббота. 20:30</li>
+                            <li class="li_discript2">3000<i class="fa fa-rub" aria-hidden="true"></i> — 5000<i class="fa fa-rub" aria-hidden="true"></i></li>
+                            <li class="li_discript3">Большой театр</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="cs3_btn_cost">
+                        <img src="img/tickets_white.png" alt="" class="cs3_btn_img">
+                        Купить билеты</button>
+                </div>
+
+                <div class="col-sm-6 col-md-3 cat_sect_3__all">
+                    <div class="cs3_img7 cs3_div_img"></div>
+                    <div class="cs3_content">
+                        <p>Спектакль или постановка.</p>
+                        <p>Бедность — не порок</p>
+                        <ul class="cs3_ul__discription" style="background-color: #eeeeee">
+                            <li class="li_discript1">26 декабря. Суббота. 20:30</li>
+                            <li class="li_discript2">3000<i class="fa fa-rub" aria-hidden="true"></i> — 5000<i class="fa fa-rub" aria-hidden="true"></i></li>
+                            <li class="li_discript3">Большой театр</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="cs3_btn_cost">
+                        <img src="img/tickets_white.png" alt="" class="cs3_btn_img">
+                        Купить билеты</button>
+                </div>
+
+                <div class="col-sm-6 col-md-3 cat_sect_3__all">
+                    <div class="cs3_img8 cs3_div_img"></div>
+                    <div class="cs3_content">
+                        <p>Спектакль или постановка.</p>
+                        <p>Бедность — не порок</p>
+                        <ul class="cs3_ul__discription" style="background-color: #eeeeee">
+                            <li class="li_discript1">26 декабря. Суббота. 20:30</li>
+                            <li class="li_discript2">3000<i class="fa fa-rub" aria-hidden="true"></i> — 5000<i class="fa fa-rub" aria-hidden="true"></i></li>
+                            <li class="li_discript3">Большой театр</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="cs3_btn_cost">
+                        <img src="img/tickets_white.png" alt="" class="cs3_btn_img">
+                        Купить билеты</button>
+                </div>
+                <div class="col-md-12 my_pagintion">
+                    <!--pagintion-->
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#"><span class="glyphicon glyphicon-menu-left"></span></a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#">6</a></li>
+                            <li class="page-item"><a class="page-link" href="#">7</a></li>
+                            <li class="page-item"><a class="page-link" href="#"><span class="glyphicon glyphicon-menu-right"></span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+    <!--END cat SECTION 3-->
+
+    <!--cat SECTION 4 BEGIN-->
+    <div class="cat_section_4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Рекомендуем</h3>
+                </div>
+
+                <div class="col-sm-6 col-md-3 cat_sect_4__all">
+                    <div class="cs4_img1 cs4_div_img" style=""></div>
+                    <div class="cs4_content">
+                        <p>Спектакль или постановка.</p>
+                        <p>Бедность — не порок</p>
+                        <ul class="cs4_ul__discription" style="background-color: #eeeeee">
+                            <li class="li_discript1">26 декабря. Суббота. 20:30</li>
+                            <li class="li_discript2">3000<i class="fa fa-rub" aria-hidden="true"></i> — 5000<i class="fa fa-rub" aria-hidden="true"></i></li>
+                            <li class="li_discript3">Большой театр</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="cs4_btn_cost">
+                        <img src="img/tickets_white.png" alt="" class="cs4_btn_img">
+                        Купить билеты</button>
+                </div>
+
+                <div class="col-sm-6 col-md-3 cat_sect_4__all">
+                    <div class="cs4_img2 cs4_div_img"></div>
+                    <div class="cs4_content">
+                        <p>Спектакль или постановка.</p>
+                        <p>Бедность — не порок</p>
+                        <ul class="cs4_ul__discription" style="background-color: #eeeeee">
+                            <li class="li_discript1">26 декабря. Суббота. 20:30</li>
+                            <li class="li_discript2">3000<i class="fa fa-rub" aria-hidden="true"></i> — 5000<i class="fa fa-rub" aria-hidden="true"></i></li>
+                            <li class="li_discript3">Большой театр</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="cs4_btn_cost">
+                        <img src="img/tickets_white.png" alt="" class="cs4_btn_img">
+                        Купить билеты</button>
+                </div>
+
+                <div class="col-sm-6 col-md-3 cat_sect_4__all">
+                    <div class="cs4_img3 cs4_div_img"></div>
+                    <div class="cs4_content">
+                        <p>Спектакль или постановка.</p>
+                        <p>Бедность — не порок</p>
+                        <ul class="cs4_ul__discription" style="background-color: #eeeeee">
+                            <li class="li_discript1">26 декабря. Суббота. 20:30</li>
+                            <li class="li_discript2">3000<i class="fa fa-rub" aria-hidden="true"></i> — 5000<i class="fa fa-rub" aria-hidden="true"></i></li>
+                            <li class="li_discript3">Большой театр</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="cs4_btn_cost">
+                        <img src="img/tickets_white.png" alt="" class="cs4_btn_img">
+                        Купить билеты</button>
+                </div>
+
+                <div class="col-sm-6 col-md-3 cat_sect_4__all">
+                    <div class="cs4_img4 cs4_div_img"></div>
+                    <div class="cs4_content">
+                        <p>Спектакль или постановка.</p>
+                        <p>Бедность — не порок</p>
+                        <ul class="cs4_ul__discription" style="background-color: #eeeeee">
+                            <li class="li_discript1">26 декабря. Суббота. 20:30</li>
+                            <li class="li_discript2">3000<i class="fa fa-rub" aria-hidden="true"></i> — 5000<i class="fa fa-rub" aria-hidden="true"></i></li>
+                            <li class="li_discript3">Большой театр</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="cs4_btn_cost">
+                        <img src="img/tickets_white.png" alt="" class="cs4_btn_img">
+                        Купить билеты</button>
+                </div>
+
+                <div class="col-sm-12 col-md-12 more">
+                    <button class="btn_show_more" type="button">Показать еще</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END cat SECTION 4-->
+
+    <!--SECTION6 BEGIN-->
+    <div class="section6">
+        <div class="container">
+            <div class="partners">
+                <div class="partner"><img src="img/partner1.png" alt=""></div>
+                <div class="partner"><img src="img/partner2.png" alt=""></div>
+                <div class="partner"><img src="img/partner3.png" alt=""></div>
+                <div class="partner"><img src="img/partner4.png" alt=""></div>
+                <div class="partner"><img src="img/partner5.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <!--SECTION6 END-->
+</main>
+<!--MAIN END-->
+
+<!--FOOTER BEGIN-->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-top clearfix">
+                <div class="logo-img">
+                    <img src="img/logo2.png" alt="">
+                </div>
+                <div class="tel-number">
+                    <div class="footer-contact">
+                        <span> Заказ билетов</span>
+                        <div class="phones">
+                            <p class="textBold"><a href="tel:+7 (495) 662-56-78">+7 (495) 662-56-78</a></p>
+                            <p class="textBold"><a href="tel:+7 (495) 018-37-93">+7 (495) 018-37-93</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="partner-img">
+                    <img src="img/visa.png" alt="">
+                    <img src="img/logotype.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom clearfix">
+            <div class="footer-menu">
+                <div class="col-md-2 col-sm-6">
+                    <ul class="list-unstyled">
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Новости</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Кассы</a></li>
+                        <li><a href="#">Доставка</a></li>
+                        <li><a href="#">Афиша</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Отмена и перенос мероприятий</a></li>
+                        <li><a href="#">Возврат билетов</a></li>
+                        <li><a href="#">как зказать</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Корпоративным клиентам</a></li>
+                        <li><a href="#">Публичная оферта</a></li>
+                        <li><a href="#">Online оплата</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="copyright">
+                Copyright © 2017 Все права защищены. Moscow Tickets Group
+            </div>
+        </div>
+    </div>
+</footer>
+<!--FOOTER END-->
+
+<script src="js/jquery.min.js"></script><!-- Jquery Library -->
+<script src="js/bootstrap.min.js"></script><!-- Bootstrap Library -->
+<script src="js/app.js"></script><!-- Custom Library -->
+</body>
+</html>

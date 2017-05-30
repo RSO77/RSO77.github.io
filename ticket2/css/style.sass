@@ -1,0 +1,1695 @@
+
+//FONTS BEGIN
+=font-face($family, $path, $weight: normal, $style: normal)
+	@font-face
+		font-family: $family
+		src: url('#{$path}.eot')
+		src: url('#{$path}.eot?#iefix') format('embedded-opentype'), url('#{$path}.woff') format('woff'), url('#{$path}.ttf') format('truetype')
+		font-weight: $weight
+		font-style: $style
+
++font-face('Muller-Regular', '../fonts/mullerregular-webfont')
++font-face('Muller-Bold', '../fonts/mullerbold-webfont')
++font-face('Muller-Light', '../fonts/mullerlight-webfont')
+
+=Muller-r
+	font-family: "Muller-Regular", arial, sans-serif
+=Muller-b
+	font-family: "Muller-Bold", arial, sans-serif
+=Muller-l
+	font-family: "Lato-Light", arial, sans-serif
+
+//FONTS END
+
+// cover
+=cover
+	background-position: center center
+	background-repeat: no-repeat
+	background-size: cover
+
+
+// media
+// $width - ширина на адаптив
+// @content - класс элемента
+=r($width)
+	@media only screen and (max-width: $width + px)
+		@content
+
+
+//OTHER STYLES BEGIN
+
+
+body
+	font-size: 14px
+	font-weight: 400
+	+Muller-r
+	background: #e1eaf5 url("../img/main-bg.png") 0 0 no-repeat
+	background-size: 1920px 1200px
+.container
+	background: #fff
+.no-padding
+	padding: 0
+
+*
+	outline: none !important
+
+img
+	max-width: 100%
+
+a
+	transition: 0.4s
+h2
+	color: #07ab66
+	font-size: 42px
+	+Muller-l
+p
+	+Muller-b
+	font-size: 20px
+	line-height: 25px
+	text-transform: uppercase
+	color: #c6c5c5
+	span
+		color: #07ab66
+
+// common style
+.btn
+	border-radius: 22px
+	display: inline-block
+	line-height: normal
+
+.header
+	width: 100%
+	overflow-x: hidden
+	.container
+		.logo
+			margin-top: 25px
+			float: left
+		.searchBlock
+			margin-right: -10px
+			float: right
+			margin-top: 27px
+			position: relative
+			max-width: 440px
+			display: inline-block
+			width: 100%
+			input
+				width: 100%
+				height: 42px
+				background-color: #f5f5f5
+				border: none
+				color: black
+			i
+				color: #07ab66
+				position: absolute
+				font-size: 30px
+				right: 10px
+				top: 50%
+				transform: translateY(-50%)
+
+		.heder-right
+			text-align: center
+			display: block
+			width: 100%
+		.header-contact
+			+Muller-b
+			display: inline-block
+			margin-top: 10px
+			span
+				text-align: right
+				vertical-align: middle
+				display: inline-block
+				font-size: 18px
+				color: #a3a3a3
+				max-width: 90px
+				margin-right: 10px
+				line-height: normal
+			.phones
+				vertical-align: middle
+				display: inline-block
+				margin-top: 17px
+				line-height: 18px
+				.textBold
+					font-size: 22px
+					line-height: 15px
+					a
+						color: #000
+	.basket
+		float: right
+		.btn
+			background: url("../img/basket-bg.png")
+			border-radius: 0
+			width: 170px
+			height: 80px
+			margin-top: 10px
+.navbar-default
+	position: relative
+	margin-top: 10px
+	&:after
+		display: inline-block
+		width: 33px
+		height: 64px
+		content: ""
+		background: url("../img/nav-left.png") 0 0 no-repeat
+		position: absolute
+		top: 0px
+		left: -33px
+	&:before
+		display: inline-block
+		width: 33px
+		height: 64px
+		content: ""
+		background: url("../img/nav-right.png") 0 0 no-repeat
+		position: absolute
+		top: 0px
+		right: -33px
+	.navbar-collapse
+		padding: 0
+		background-color: #07ab66
+		li
+			text-align: center
+			border-right: 1px solid #009856
+			&:last-child
+				border-right: none
+			a
+				width: 170px
+				color: #fff
+				+Muller-b
+				font-size: 19px
+				font-weight: 400
+				line-height: 17px
+				text-transform: uppercase
+		.active
+			a
+				background-color: #07ab66
+				width: 170px
+				color: #fff
+				+Muller-b
+				font-size: 19px
+				font-weight: 400
+				line-height: 17px
+				text-transform: uppercase
+
+.baner-section
+	font-size: 0
+.afisha-block
+	display: inline-block
+	position: relative
+	overflow: hidden
+	&:hover
+		.info
+			opacity: 1
+			bottom: 0
+		.center
+			opacity: 1
+			top: 0
+	.center
+		top: 100%
+		opacity: 0
+		height: 100%
+		position: absolute
+		text-align: center
+		width: 100%
+		padding: 0 10px
+		overflow: hidden
+		transition: all 1s ease
+		background: rgba(7,171,102,.9)
+		.cont
+			color: #fff
+			font-size: 16px
+			position: absolute
+			left: 10px
+			right: 10px
+			top: 50%
+			transform: translateY(-50%)
+			p
+				margin: 0 auto 20px
+				max-width: 190px
+			button
+				background: url("../img/tickets-bg.png")
+				width: 225px
+				height: 55px
+				border: none
+				border-radius: 5px
+				color: #07ab66
+				span
+					margin-left: 10px
+					font-size: 16px
+					+Muller-r
+					vertical-align: middle
+
+	.info
+		opacity: 0
+		bottom: -87px
+		background: rgba(0,0,0,.8)
+		height: 87px
+		position: absolute
+		text-align: center
+		width: 100%
+		padding: 0 10px
+		overflow: hidden
+		transition: all 0.5s ease
+		p
+			color: #fff
+			font-size: 16px
+			position: absolute
+			left: 10px
+			right: 10px
+			top: 50%
+			transform: translateY(-50%)
+
+.section5
+	.container
+		background: url("../img/shows-bg.jpg")
+		color: white
+		text-align: left
+		.row
+			margin-bottom: 35px
+	.bannerBlock
+		margin: 35px 25px 35px 25px
+
+		.image
+			min-height: 90px
+
+		p
+			+Muller-r
+			font-size: 16px
+			margin-bottom: 15px
+			max-width: 200px
+			color: #fff
+		.textBold
+			max-width: 200px
+			+Muller-b
+			font-size: 25px
+			margin-bottom: 20px
+			margin-top: 20px
+.section6
+	.partners
+		font-size: 0
+		margin-top: 75px
+		margin-bottom: 85px
+		.partner
+			display: inline-block
+			width: 20%
+			text-align: center
+
+.footer
+	.footer-top
+		position: relative
+		background: url("../img/footer-top-bg.png")
+		.partner-img
+			text-align: center
+			img
+				margin: 50px 60px 50px 0
+		.logo-img
+			position: absolute
+			left: 15px
+			top: 50%
+			transform: translateY(-50%)
+		.tel-number
+			position: absolute
+			right: 15px
+			top: 50%
+			transform: translateY(-50%)
+			.footer-contact
+				display: inline-block
+				span
+					text-align: right
+					vertical-align: middle
+					display: inline-block
+					font-size: 18px
+					color: #fff
+					max-width: 90px
+					margin-right: 10px
+					line-height: normal
+				.phones
+					vertical-align: middle
+					display: inline-block
+					margin-top: 17px
+					line-height: 18px
+					.textBold
+						font-size: 22px
+						line-height: 15px
+						a
+							color: #fff
+	.footer-bottom
+		margin-left: -15px
+		margin-right: -15px
+		padding-bottom: 20px
+		position: relative
+		background: url("../img/footer-bot-bg.png")
+		a
+			color: #fff
+			font-size: 16px
+		ul
+			margin-top: 30px
+		.copyright
+			color: #fff
+			font-size: 12px
+			line-height: 14px
+			margin-top: 45px
+			margin-left: 15px
+
+.bm35
+	margin-bottom: 35px
+.ticket-block
+	.table
+		height: 126px
+		tr
+			.vertical
+				width: 58px
+				background-color: #263c58
+			td
+				padding-top: 5px
+				vertical-align: middle
+				text-align: center
+				background-color: #324a68
+				color: #fff
+				font-size: 16px
+				+Muller-b
+				border-top: none
+				i
+					font-size: 37px
+				.big
+					font-size: 43px
+			.first
+				position: relative
+				padding-left: 100px
+				width: 210px
+				text-align: left
+				margin: 0 auto
+				.big
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					left: 35px
+			.third
+				width: 200px
+			.close-ticket
+				min-width: 30px
+		.head
+			td
+				color: #89acd7
+				padding-bottom: 5px
+
+.inform
+	font-size: 14px
+	margin-top: 20px
+	font-style: italic
+	span
+		display: block
+.t-h
+	min-height: 92px
+	line-height: 86px
+.b-h
+	min-height: 62px
+	line-height: 58px
+.pay-block
+	.container
+		padding-bottom: 50px
+	.pay-text
+		margin-top: 30px
+		margin-bottom: 10px
+	.light-blue
+		border-radius: 4px
+		background-color: #deedff
+		text-align: center
+	.blue
+		border-radius: 4px
+		background-color: #324a68
+		color: white
+		text-align: center
+	.icon-block
+		display: inline-block
+		vertical-align: middle
+		margin-right: 15px
+	.text-block
+		display: inline-block
+		max-width: 180px
+		vertical-align: middle
+		line-height: normal
+	.left-p-b
+		margin-top: 40px
+		text-align: right
+		.text
+			+Muller-b
+			color: #324a68
+			font-size: 43px
+			i
+				font-size: 37px
+		button
+			width: 290px
+			height: 64px
+			border: none
+			border-radius: 4px
+			background-color: #07ab66
+			color: white
+			font-size: 22px
+			text-transform: uppercase
+			+Muller-b
+
+//breadcrums
+.breadcrumb
+	max-width: 1170px
+	margin-top: -1px
+	padding: 3px 0px
+	font-size: 16px
+	font-weight: 700
+	+Muller-b
+	text-transform: uppercase
+	background-color: #fff
+	.active
+		color: #2d4665
+
+.breadcrumb_a
+	color: #b0b0b0
+	letter-spacing: 0.79px
+.breadcrumb > li + li:before
+	content: none
+
+.glyphicon-menu-right
+	color: #b0b0b0
+
+
+//section_1 styles
+.section_1
+	margin-top: -1px
+	.container
+		padding-bottom: 3.3%
+		background-color: #fff
+	.col-md-5
+		padding-left: 0
+		.sl_1
+			margin-top: 5px
+			margin-bottom: 9px
+			&:hover
+				cursor: pointer
+
+
+	.sl_2
+		&:hover
+			cursor: pointer
+		.section_1__div_img
+			height: 83px
+			width: 152px
+
+	.section_1__div1
+		max-width: 670px
+		width: 100%
+		h2
+			margin-top: -3px
+			padding-left: 0px
+			margin-bottom: 0
+			font-size: 42px
+			font-weight: 100
+			+Muller-l
+			color: #07ab66
+		p
+			margin-bottom: 15px
+			text-transform: uppercase
+			letter-spacing: 2px
+			color: #c6c5c5
+		.section_1__btn
+			padding-top: 15px
+			padding-bottom: 15px
+			padding-left: 20px
+			padding-right: 66.5%
+			border: 1px solid #eeeeee
+			background-color: #eeeeee
+
+		.tickets_img
+			z-index: 1
+			padding-left: 10px
+			padding-bottom: 1px
+			margin-right: 14px
+			margin-top: -4px
+		.section_1__content
+			height: auto
+		.text
+			padding-top: 3%
+			padding-bottom: 1.2%
+			font-size: 16px
+			font-weight: 100
+			+Muller-l
+			color: #000
+			line-height: 21px
+
+.a__read_text
+	margin-top: 6px
+
+	a
+		font-size: 12px
+		font-weight: 700
+		+Muller-l
+		margin-left: -4px
+		color: #263c58
+		letter-spacing: 1.5px
+	span
+		font-size: 12px
+		font-weight: 700
+
+
+//section 2 styles
+.section_2
+	margin-top: -19px
+	.col-md-3
+		padding-left: 4%
+		font-size: 42px
+		+Muller-l
+		color: #263c58
+	.col-md-2
+		margin-left: -28px
+		padding-top: 12px
+		.section_2__btn
+			width: 158px
+			height: 37px
+			border-radius: 5px
+			border: 0
+			font-size: 16px
+			font-weight: 500
+			+Muller-b
+			color: #263c58
+			background-color: transparent
+			letter-spacing: 1px
+			text-transform: uppercase
+			.fa
+				margin-left: 5px
+
+	.section_2__table
+		padding-top: 10px
+		margin-top: -1px
+		position: relative
+		.up
+			margin-top: -17px
+
+		.col-md-3
+			margin-left: 0
+			margin-bottom: 50px
+		p
+			font-size: 14px
+			font-weight: 100
+			+Muller-r
+			margin-top: 15px
+			margin-bottom: 0
+			width: 77%
+			line-height: 17px
+			color: #263c58
+			letter-spacing: 2px
+		span
+			float: left
+			padding-right: 12px
+			font-size: 43px
+			font-weight: 500
+			+Muller-b
+			color: #263c58
+		.table-responsive
+			padding-top: 9px
+			padding-left: 0
+select.choice1
+	padding-left: 7px
+	border: 0px!important
+	width: 158px
+	height: 37px
+	border-radius: 5px
+	font-size: 16px
+	font-weight: 500
+	+Muller-b
+	color: #263c58
+	background-color: transparent
+	letter-spacing: 1px
+	text-transform: uppercase
+	&:hover
+		background-color: #263c58
+		color: #fff
+		transition: 0.4s
+select.choice2
+	padding-left: 7px
+	border: 0px!important
+	width: 158px
+	height: 37px
+	border-radius: 5px
+	font-size: 16px
+	font-weight: 500
+	+Muller-b
+	color: #263c58
+	background-color: transparent
+	letter-spacing: 1px
+	text-transform: uppercase
+	&:hover
+		background-color: #263c58
+		color: #fff
+		transition: 0.4s
+select.choice3
+	padding-left: 7px
+	border: 0px!important
+	width: 158px
+	height: 37px
+	border-radius: 5px
+	font-size: 16px
+	font-weight: 500
+	+Muller-b
+	color: #263c58
+	background-color: transparent
+	letter-spacing: 1px
+	text-transform: uppercase
+	&:hover
+		background-color: #263c58
+		color: #fff
+		transition: 0.4s
+.table-condensed
+	font-size: 14px
+	font-weight: 100
+	+Muller-l
+	text-align: center
+	color: #fff
+	border: 0px
+	letter-spacing: 1px
+.table-condensed>tbody>tr>td
+	border-color: #263c58
+.row_darkblue
+	background-color: #263c58
+	td
+		border-right-color: #263c58
+.row_blue
+	background-color: #324a68
+	td
+		border-right: 0px
+.cell_btn_cost
+	text-align: right
+.btn_cost
+	height: 23px
+	background-color: #07ab66
+	border-color: #07ab66
+	border-radius: 3px
+	font-size: 11px
+	text-transform: uppercase
+.sect_2_img_tickets
+	position: absolute
+	left: 0
+	top: 0
+	margin-top: -4.5%
+	margin-left: 2%
+	z-index: 0
+
+//section 3 styles
+.reviews
+	h3
+		margin-top: 14px
+		margin-bottom: 2%
+		padding-left: 0.5%
+		font-size: 24px
+		font-weight: bold
+		+Muller-b
+		color: #000
+		letter-spacing: 1px
+
+
+.review
+	margin-bottom: 1.5%
+	max-width: 1170px
+	width: 100%
+	min-height: 150px
+	border: 1px solid #eeeeee
+	background-color: #eeeeee
+	.col-md-2
+		padding-top: 1.5%
+	.review__image
+		float: left
+		text-align: center
+		margin-top: 1.4%
+		margin-left: 2%
+	.review__img
+		float: left
+		border-radius: 50px
+
+	.review__all_text
+		margin-top: 1.4%
+		padding-left: 150px
+	.all_text__name
+		margin-bottom: 4px
+		font-size: 14px
+		font-weight: 100
+		+Muller-l
+		color: #b5b5b5
+		span
+			padding-right: 24px
+			font-size: 16px
+			font-weight: bold
+			+Muller-b
+			color: #000
+			letter-spacing: 1px
+	.all_text_1
+		margin-bottom: 3px
+		font-size: 13px
+		font-weight: 100
+		+Muller-r
+		color: #000
+		letter-spacing: 1.33px
+	.evaluation
+		font-size: 14px
+		font-weight: bold
+		+Muller-r
+		padding-left: 2px
+		.fa-minus-circle
+			padding-right: 15px
+			color: #b5b5b5
+			&:hover
+				color: #8fd075
+		.fa-plus-circle
+			padding-left: 15px
+			color: #b5b5b5
+			&:hover
+				color: #8fd075
+
+.form_reviews
+	margin-bottom: 16%
+	width: 100%
+	margin: 0 auto
+	h3
+		width: 100%
+		margin-top: 2.5%
+		margin-right: auto
+		margin-left: auto
+		margin-bottom: 16px
+		font-size: 24px
+		font-weight: bold
+		+Muller-b
+		color: #000
+		letter-spacing: 1px
+.bg_form
+	height: 375px
+	padding-top: 40px
+	background-color: #eeeeee
+	margin-bottom: 160px
+	padding-left: 100px
+	form
+		height: 211px
+		input
+			display: block
+			float: left
+			border: 0px
+			margin-bottom: 10px
+			padding: 0px 22px
+			width: 480px
+			height: 47px
+			font-size: 15px
+			font-weight: bold
+			+Muller-r
+			color: #000
+			letter-spacing: 1px
+		.input_name
+			margin-right: 10px
+		textarea
+			border: 0px
+			margin-bottom: 10px
+			padding: 22px
+			width: 970px
+			height: 154px
+			resize: none
+			font-size: 15px
+			font-weight: bold
+			+Muller-r
+			color: #000
+			letter-spacing: 1px
+		.bnt_Send_form
+			float: left
+			border: 0px
+			width: 256px
+			height: 62px
+			background-color: #07ab66
+			font-size: 15px
+			font-weight: bold
+			+Muller-b
+			color: #fff
+			text-transform: uppercase
+			border-radius: 5px
+
+
+//---------style for cat page--------/
+//cat_section_1 styles
+.cat_section_1
+	.col-md-10
+		padding-right: 0
+	h3
+		font-size: 42px
+		font-weight: 100!important
+		+Muller-l
+		color: #07ab66
+	ul.months
+		//max-width: 970px
+		width: 100%
+		margin-top: 11px
+		list-style-type: none
+		padding: 0 10px 0px 10px
+		li
+			display: inline
+			padding-left: 14.9px
+			padding-right: 14.9px
+			font-size: 16px
+			font-weight: bold
+			+Muller-b
+			color: #000
+			text-transform: uppercase
+			letter-spacing: 0.1px
+			cursor: pointer
+			//&:last-child
+			//	padding-right: 4px
+			&:hover
+				padding-top: 6px
+				padding-bottom: 6px
+				border: #07ab66
+				background-color: #07ab66
+				border-radius: 2px
+				color: #fff
+
+	.ul_pages
+		max-width: 961px
+		width: 100%
+		margin-top: -5px
+		margin-left: 10px
+		padding: 0px
+		list-style-type: none
+		background-color: #263c58
+		text-align: left
+		li
+			text-align: center
+			border: none
+			width: 30.5px
+			display: inline-block
+			font-size: 19px
+			font-weight: 100
+			+Muller-r
+			color: #fff
+			text-transform: uppercase
+			letter-spacing: 0.1px
+			cursor: pointer
+			&:hover
+				background-color: #07ab66
+				border-color: #07ab66
+				border-radius: 2px
+				color: #fff
+
+.cat_sect2_date
+	margin-top: 31px
+	margin-right: -25px
+	font-size: 16px
+	font-weight: bold
+	color: #a8a8a8
+	text-align: right
+	text-transform: uppercase
+.cat_drop1
+	padding-left: 27px
+
+.cat_drop2
+	margin-top: 26px
+	margin-left: -56px
+	padding-left: 20px
+
+.cat_drop3
+	margin-top: 26px
+	margin-left: -60px
+	padding-left: 20px
+
+.cat_drop4
+	margin-top: 26px
+	margin-left: -13px
+	padding-left: 20px
+
+.btn-default
+	font-size: 16px
+	font-weight: bold
+	border: 0px
+	color: #2d4665
+	text-transform: uppercase
+	letter-spacing: 0.4px
+	.caret
+		margin-top: -7px
+	&:hover
+		border: 0
+		background-color: #2d4665
+		color: #fff
+		border-radius: 5px
+	&:visited
+		border: 0
+		background-color: #2d4665
+		color: #fff
+		border-radius: 5px!important
+//section 3 styles
+.cat_section_3
+	//background-color: #eeeeee
+	.cat_sect_3__all
+		width: 270px
+		margin-top: 2.4%
+		margin-bottom: 8px
+		margin-left: 15px
+		margin-right: 15px
+		border: 1px solid #eeeeee
+		padding-top: 0px
+		padding-left: 0
+		padding-right: 0
+		padding-bottom: 10px
+		text-align: center
+		.cs3_img1
+			background: url('../img/picture_01.jpg') no-repeat center
+		.cs3_img2
+			background: url('../img/picture_02.jpg') no-repeat center
+		.cs3_img3
+			background: url('../img/picture_03.jpg') no-repeat center
+		.cs3_img4
+			background: url('../img/picture_04.jpg') no-repeat center
+		.cs3_img5
+			background: url('../img/picture_05.jpg') no-repeat center
+		.cs3_img6
+			background: url('../img/picture_06.jpg') no-repeat center
+		.cs3_img7
+			background: url('../img/picture_07.jpg') no-repeat center
+		.cs3_img8
+			background: url('../img/picture_08.jpg') no-repeat center
+		.cs3_div_img
+			width: 100%
+			height: 170px
+			margin-left: 0
+
+.cs3_content
+	margin-top: 3%
+	padding-left: 8%
+	p
+		margin-bottom: 1px
+		font-size: 15px
+		font-weight: 700
+		+Muller-b
+		color: #000
+		text-align: left
+
+.cs3_btn_cost
+	padding-top: 8px
+	letter-spacing: 0.4px
+	width: 228px
+	height: 46px
+	font-size: 15px
+	font-weight: 700
+	+Muller-b
+	color: #fff
+	background-color: #07ab66
+	border: 0px
+	border-radius: 4px
+	text-transform: uppercase
+	background-image: url("../img/tickets_bg.png")
+	img
+		position: relative
+		margin-left: -7px
+		margin-top: -5px
+		margin-right: 17px
+.cs3_ul__discription
+	margin-top: 6%
+	margin-left: -6px
+	padding-left: 0
+	font-size: 14px
+	font-weight: 400
+	+Muller-b
+	color: #000
+	text-align: left
+.li_discript1
+	margin-bottom: 0px
+	line-height: 40px
+	//padding-left: 15%
+	letter-spacing: .3px
+	list-style: none
+	background: url(../img/li-1.png) no-repeat 0 center
+	padding-left: 42px
+.li_discript2
+	margin-bottom: 0px
+	line-height: 40px
+	//padding-left: 15%
+	letter-spacing: .3px
+	list-style: none
+	background: url(../img/li-2.png) no-repeat 0 center
+	padding-left: 42px
+	i
+		font-size: 13px
+.li_discript3
+	margin-bottom: 0px
+	line-height: 40px
+	//padding-left: 15%
+	letter-spacing: .3px
+	list-style: none
+	background: url(../img/li-3.png) no-repeat 0 center
+	padding-left: 42px
+
+.my_pagintion
+	text-align: center
+	.pagination
+		margin-bottom: 8px
+		margin-top: 51px
+		margin-left: 0
+		margin-right: 0
+	.pagination>li>a
+		display: inline-block
+		vertical-align: middle
+		width: 32px
+		height: 32px
+		font-size: 19px
+		font-weight: 700
+		line-height: 32px
+		padding: 0
+		margin: 0 5px
+		+Muller-b
+		color: #b0b0b0
+		border: 0px
+		&:hover
+			border-radius: 50px
+			background-color: #07ab66
+			color: #fff
+	.pagination>li>span
+		font-size: 27px!important
+		font-weight: 700
+		+Muller-b
+		color: #b1b1b1
+		border: 0px
+		top: 5px
+		&:hover
+			border-radius: 50px
+			background-color: #07ab66
+			color: #fff !important
+
+//cat_section_4
+.cat_section_4
+	h3
+		font-size: 42px
+		font-weight: 100!important
+		+Muller-l
+		color: #07ab66
+	.cat_sect_4__all
+		width: 270px
+		margin-top: 0.7%
+		margin-bottom: 8px
+		margin-left: 15px
+		margin-right: 15px
+		border: 1px solid #eeeeee
+		padding-top: 0px
+		padding-left: 0
+		padding-right: 0
+		padding-bottom: 10px
+		text-align: center
+		.cs4_img1
+			background: url('../img/picture_01.jpg') no-repeat center
+		.cs4_img2
+			background: url('../img/picture_02.jpg') no-repeat center
+		.cs4_img3
+			background: url('../img/picture_03.jpg') no-repeat center
+		.cs4_img4
+			background: url('../img/picture_04.jpg') no-repeat center
+		.cs4_div_img
+			width: 100%
+			height: 170px
+			margin-left: 0
+
+	.cs4_content
+		margin-top: 3%
+		padding-left: 8%
+		p
+			margin-bottom: 1px
+			font-size: 15px
+			font-weight: 700
+			+Muller-b
+			color: #000
+			text-align: left
+
+	.cs4_btn_cost
+		padding-top: 8px
+		letter-spacing: 0.4px
+		width: 228px
+		height: 46px
+		font-size: 15px
+		font-weight: 700
+		+Muller-b
+		color: #fff
+		background-color: #07ab66
+		border: 0px
+		border-radius: 4px
+		text-transform: uppercase
+		background-image: url("../img/tickets_bg.png")
+		img
+			position: relative
+			margin-left: -7px
+			margin-top: -5px
+			margin-right: 17px
+	.cs4_ul__discription
+		margin-top: 6%
+		margin-left: -6px
+		padding-left: 0
+		font-size: 14px
+		font-weight: 400
+		+Muller-b
+		color: #000
+		text-align: left
+		.li_discript1
+			margin-bottom: 0px
+			line-height: 40px
+			letter-spacing: .3px
+			list-style: none
+			background: url(../img/li-1.png) no-repeat 0 center
+			padding-left: 42px
+		.li_discript2
+			margin-bottom: 0px
+			line-height: 40px
+			letter-spacing: .3px
+			list-style: none
+			background: url(../img/li-2.png) no-repeat 0 center
+			padding-left: 42px
+			i
+				font-size: 13px
+		.li_discript3
+			margin-bottom: 0px
+			line-height: 40px
+			letter-spacing: .3px
+			list-style: none
+			background: url(../img/li-3.png) no-repeat 0 center
+			padding-left: 42px
+	div.more
+		margin-top: 20px
+		text-align: center
+		button
+			width: 230px
+			height: 47px
+			font-size: 18px
+			font-weight: 600
+			+Muller-b
+			background-color: #2d4665
+			color: #fff
+			border-color: #2d4665
+			border-radius: 4px
+
+//modal window 1 styles
+.modal-open
+	.modal
+		background-color: rgba(0, 0, 0, 0.7)
+		.modal-lg
+			width: 1170px
+
+.modal-content
+	//background-color: rgba(0, 0, 0, 0.1)
+	width: 1170px
+	background-color: transparent
+	border: 0px
+	box-shadow: none
+	.modal-header
+		border: 0
+
+.modal_tel
+	text-align: right
+	float: left
+	margin-left: 56.5%
+	position: relative
+	margin-top: 2%
+	a
+		font-size: 30px
+		font-weight: 600
+		+Muller-b
+		color: #07ab66
+.modal_basket
+	padding-left: 13%
+	padding-top: 2%
+	padding-right: 2%
+	width: 170px
+	height: 80px
+	float: right
+	text-align: right
+	font-size: 16px
+	font-weight: 600
+	+Muller-b
+	color: #000
+	background: url("../img/basket01.jpg") no-repeat center
+	p
+		width: 100px
+		margin-left: -87px
+
+.modal_text
+	padding: 0
+	padding-top: 3%
+	h2
+		margin-top: -3px
+		padding-left: 0px
+		margin-bottom: 0
+		font-size: 43px
+		font-weight: 100
+		+Muller-l
+		color: #07ab66
+	p
+		margin-bottom: 15px
+		text-transform: uppercase
+		letter-spacing: 2px
+		color: #fff
+	.form-group
+		display: inline-block
+		margin-top: 1.8%
+		margin-left: 13.5%
+		margin-right: -10.5%
+		width: 12%
+		color: #fff
+		select
+			color: #fff
+
+	.close
+		margin-top: 0.5%
+		margin-right: 23px
+		font-size: 60px
+		color: #fff
+		opacity: 1
+		&:hover
+			opacity: 0.5
+	.mw_row2
+		display: inline-block
+		margin-top: 8px
+		width: 100%
+		.col-md-3
+			width: 21.5%
+			padding-left: 7px
+	.mw_date
+		color: #fff
+		//display: inline-block
+		span
+			float: left
+			font-size: 43px
+			font-weight: 500
+			+Muller-b
+		p
+			margin-left: 65px
+			margin-top: 11px
+			text-transform: none
+			width: 50%
+			font-size: 16px
+			font-weight: 500
+			+Muller-b
+			letter-spacing: 0.5px
+
+	.mw_table
+		display: inline-block
+		margin-top: 14px
+		width: 895px
+		padding-right: 0
+		padding-left: 0
+
+.thenks
+	text-align: center
+	.img
+		margin-bottom: 35px
+		margin-top: 110px
+	.green-text
+		margin: 0 auto
+		margin-bottom: 50px
+		+Muller-l
+		max-width: 540px
+		font-size: 42px
+		color: #07ab66
+		.text
+			color: black
+			font-size: 24px
+	button
+		width: 194px
+		color: #ffffff
+		font-size: 15px
+		text-transform: uppercase
+		width: 247px
+		height: 45px
+		border-radius: 4px
+		background-color: #2d4665
+		margin-bottom: 585px
+
+.poster
+	.container
+		padding-bottom: 80px
+	.poster-block
+		margin-top: 30px
+		.img-block
+			display: inline-block
+			width: 370px
+			img
+				width: 100%
+		.post-content-block
+			vertical-align: middle
+			padding-left: 30px
+			width: 770px
+			display: inline-block
+			.title
+				margin-bottom: 20px
+				color: white
+				font-size: 18px
+				border-radius: 4px
+				background-color: #2d4665
+				padding: 0px 14px
+			.info
+				display: inline-block
+				color: #000
+				p
+					background-color: #ffffff
+					font-size: 14px
+					img
+						margin-right: 5px
+					i
+						font-size: 12px
+			.btn-block
+				display: inline-block
+				max-width: 470px
+				max-height: 105px
+				background-color: #e8e8e8
+				float: right
+				text-align: center
+				button
+					margin-top: 30px
+					margin-bottom: 30px
+					background: url("../img/ticket-green-bg.png")
+					width: 230px
+					height: 45px
+					border: none
+					border-radius: 5px
+					background-color: #07ab66
+					span
+						color: white
+						margin-left: 10px
+						font-size: 16px
+						+Muller-r
+						vertical-align: middle
+.main
+	.cat_section_4
+		h3
+			margin-top: 40px
+			margin-bottom: 20px
+	.cat_section_1
+		ul.months
+			margin-top: 20px
+
+	.cat_section_3
+		.container
+			padding-bottom: 50px
+// media
+@media (min-width: 1200px)
+	.container
+		width: 1200px
+
+@media (max-width: 1200px)
+	.navbar-default
+		.navbar-collapse
+			li
+				a
+					width: 137px
+			.active
+				a
+					width: 137px
+	.header
+		.container
+			.searchBlock
+				max-width: 220px
+
+			.header-contact
+				display: inline-block
+				margin-top: 10px
+				span
+					font-size: 15px
+					margin-right: 7px
+				.phones
+					margin-top: 15px
+					line-height: 15px
+					.textBold
+						font-size: 19px
+						line-height: 15px
+	.poster
+		.poster-block
+			.post-content-block
+				padding-left: 20px
+				width: 565px
+				.title
+					margin-bottom: 20px
+					font-size: 16px
+				.info
+					p
+						font-size: 12px
+						i
+							font-size: 11px
+				.btn-block
+					max-width: 330px
+	.bg_form
+		padding-left: 50px
+		form
+			input
+				width: 410px
+			textarea
+				width: 830px
+
+
+@media (max-width: 992px)
+	.sect_2_img_tickets
+		display: none
+	.header
+		.container
+			.header-left
+				text-align: center
+				.logo
+					float: none
+					display: inline-block
+					vertical-align: middle
+					margin-top: 5px
+				form
+					display: inline-block
+					min-width: 220px
+					vertical-align: middle
+			.heder-right
+				text-align: center
+			.searchBlock
+				float: none
+		.basket
+			float: none
+			display: inline-block
+			margin-left: 20px
+	.footer
+		.footer-top
+			text-align: center
+			.logo-img
+				display: inline-block
+				top: 20px
+				margin-bottom: 0px
+				position: relative
+				transform: translationY(0%)
+				margin-right: 30px
+			.tel-number
+				top: 30px
+				transform: translationY(0%)
+				display: inline-block
+				position: relative
+		.footer-bottom
+			background: none
+			background-color: #2d4665
+	.section5
+		.container
+			background: none
+			background-color: #2d4665
+		.bannerBlock
+			.baner
+				min-height: 416px
+				margin-bottom: 20px
+	.navbar-default
+		&:after
+			display: none
+		&:before
+			display: none
+		.navbar-collapse
+			li
+				a
+					width: 106px
+			.active
+				a
+					width: 106px
+	.ticket-block
+		.table
+			height: 126px
+			tr
+				td
+					font-size: 12px
+					+Muller-b
+					border-top: none
+					i
+						font-size: 25px
+					.big
+						font-size: 27px
+				.first
+					padding-left: 70px
+					width: 170px
+					.big
+						left: 20px
+				.third
+					width: 150px
+	.poster
+		.poster-block
+			text-align: center
+			.post-content-block
+				padding-top: 30px
+				width: 565px
+				padding-left: 0
+				.title
+					margin-bottom: 20px
+					font-size: 16px
+				.info
+					text-align: left
+					p
+						font-size: 12px
+						i
+							font-size: 11px
+				.btn-block
+					max-width: 330px
+	.bg_form
+		padding-left: 50px
+		form
+			input
+				width: 305px
+			textarea
+				width: 620px
+
+@media (max-width: 767px)
+
+	.section6
+		.partners
+			text-align: center
+			.partner
+				width: 50%
+	.footer-bottom
+		text-align: center
+	.section5
+		.bannerBlock
+			.baner
+				min-height: 100px
+				text-align: center
+				margin-bottom: 40px
+				.textBold
+					margin-top: 0
+					max-width: 100%
+				p
+					max-width: 100%
+
+	.navbar-default
+		.navbar-collapse
+			li
+				a
+					width: 100%
+			.active
+				a
+					width: 100%
+	.footer
+		.footer-top
+			.tel-number
+				.footer-contact
+					margin-bottom: 10px
+			.logo-img
+				margin-top: 20px
+				margin-bottom: 20px
+			.partner-img
+				img
+					display: block
+					margin: 0 auto 30px
+
+	.ticket-block
+		.table
+			height: auto
+			tr
+				td
+					font-size: 12px
+					padding: 0 5px
+					+Muller-b
+					border-top: none
+					i
+						font-size: 16px
+					.big
+						font-size: 20px
+				.first
+					padding-left: 50px
+					width: 130px
+					.big
+						left: 10px
+				.third
+					width: 120px
+				.vertical
+					width: 30px
+					min-width: 30px
+
+	.pay-block
+		.light-blue
+			margin-bottom: 20px
+	.header
+		.navbar-default
+			border: 1px solid #07ab66
+			.navbar-header
+				background: #07ab66
+			.navbar-toggle, .navbar-toggle:hover, .navbar-toggle:focus, .navbar-toggle:active
+				background: transparent
+				span
+					background: #fff
+	.bg_form
+		padding-left: 20px
+		form
+			input
+				width: 100%
+			textarea
+				width: 100%
+
+@media (max-width: 580px)
+	.review
+		height: 140px
+		overflow: scroll
+		.review__all_text
+			padding-left: 140px
+		.all_text__name
+			span
+				font-size: 14px
+		.all_text_1
+			font-size: 11px
+	.ticket-block
+		width: 100%
+		overflow: scroll
+		.table
+			width: 560px
+	.pay-block
+		.left-p-b
+			.text
+				+Muller-b
+				color: #324a68
+				font-size: 30px
+				margin-bottom: 20px
+				i
+					font-size: 26px
+			button
+				width: 290px
+				font-size: 18px
+	.inform
+		font-size: 12px
+	.poster
+		.poster-block
+			width: auto
+			.img-block
+				width: 290px
+			.post-content-block
+				width: auto
+				.btn-block
+					float: none
+
+@media (max-width: 470px)
+	.header-contact
+		span
+			font-size: 12px
+		.phones
+			margin-top: 15px
+			line-height: 14px
+			.textBold
+				font-size: 15px
+				line-height: 14px
+	.thenks
+		.green-text
+			font-size: 35px
+			.text
+				font-size: 18px
+				margin-top: 20px
+
+@media (max-width: 370px)
+	.pay-block
+		.left-p-b
+			.text
+				font-size: 26px
+				i
+					font-size: 22px
